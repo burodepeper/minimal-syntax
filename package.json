@@ -1,0 +1,14 @@
+{
+  "name": "Minimal",
+  "author": "David van Gemeren <david@burodepeper.nl>",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "TODO",
+  "keywords": [ "syntax", "theme" ],
+  "repository": "https://github.com/atom/minimal-syntax",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
