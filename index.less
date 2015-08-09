@@ -2,12 +2,18 @@
 @black: #000000;
 @grey:  #888888;
 
-@blue:        #0000ff;
-@blue-darker: #0000cc;
-@blue-dark:   #000099;
-@blue-pale:   #6699ff;
-@green:       #009900;
-@red:         #ee1100;
+@blue:          #0000ff;
+@blue-darker:   #0000cc;
+@blue-dark:     #000099;
+@green:         #009900;
+@green-darker:  #0099cc; // TODO wrong name
+@red:           #ee1100;
+@orange:        #ff7700;
+@orange-darker: #ff6600;
+
+
+
+
 
 atom-text-editor,
 :host {
@@ -59,82 +65,146 @@ atom-text-editor,
   .selection .region {
     background-color: fade(@black, 10%);
   }
+
+  .search-results .marker .region,
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid fade(@black, 25%);
+  }
+
+  .search-results .marker.current-result .region,
+  .search-results .marker.current-result .region {
+    border: 1px solid fade(@black, 50%);
+  }
+
+
+
+
+
+
+
+  // .operator.logical,
+  .comment {
+    color: @orange;
+
+    .type {
+      color: @orange-darker;
+    }
+  }
+
+  .operator {
+    color: @black;
+
+    &.logical {
+      color: @black;
+      font-weight: bold;
+    }
+  }
+
+  .support,
+  .storage,
+  .modifier,
+  .tag,
+  .keyword,
+  .function-call,
+  .function,
+  .object,
+  .control {
+    color: @blue;
+  }
+
+  .constant,
+  .numeric {
+    color: @red;
+  }
+
+  .variable {
+    color: @green-darker;
+  }
+
+  .string {
+    color: @green;
+  }
+
+  .php.support.function,
+  .php.classobj,
+  .terminator,
+  .storage.modifier {
+    color: @blue-darker;
+  }
+
+  .php.support.function,
+  .php.classobj,
+  .constant,
+  .heading,
+  .bold,
+  .name,
+  .magic,
+  .class {
+    font-weight: bold;
+  }
+
+  .comment,
+  .italic {
+    font-style: italic;
+  }
+
+  .terminator,
+  .punctuation {
+    opacity: 0.667;
+  }
+
+
+
+
+
+
+
+
+  // Language specific styling
+  .source {}
+  .gfm {
+    .markup {
+      -webkit-font-smoothing: auto;
+    }
+    .heading {
+      color: @blue-dark;
+    }
+  }
+  .js {
+    .variable {
+      color: @green-darker; // this
+    }
+    .constant {
+      color: @blue-dark;
+    }
+  }
+  .php {
+    .storage {
+      &.modifier {
+        font-weight: bold;
+      }
+    }
+    .control {
+      font-weight: bold;
+    }
+  }
+  .html {}
+  .text {}
+  .css {}
+  .scss {}
+
+
+
+
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
-  background-color: transparent;
-  border: 1px solid fade(@black, 25%);
-}
-
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
-  border: 1px solid fade(@black, 50%);
-}
 
 
 
 
 
 
-// Language specific styling
-.source {}
-.gfm {}
-.js {}
-.php {}
-.html {}
-.text {}
-.css {}
-.scss {}
-
-
-
-
-.comment {
-  color: @grey;
-}
-
-.operator {
-  color: @black;
-}
-
-.support,
-.storage,
-.modifier,
-.tag,
-.keyword,
-.function-call,
-.function,
-.object,
-.control {
-  color: @blue;
-}
-
-.constant,
-.numeric {
-  color: @red;
-}
-
-.variable,
-.string {
-  color: @green;
-}
-
-.heading,
-.bold,
-.name,
-.class {
-  font-weight: bold;
-}
-
-.comment,
-.italic {
-  font-style: italic;
-}
-
-.punctuation {
-  opacity: 0.75;
-}
 
 
 
@@ -149,14 +219,6 @@ atom-text-editor .search-results .marker.current-result .region,
 
 
 
-
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-  &.heading {
-    color: @black;
-    font-weight: bold;
-  }
-}
 
 atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
