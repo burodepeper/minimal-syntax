@@ -1,8 +1,10 @@
-# Minimal
-## syntax theme, work in progress
+# minimal-syntax
+
+## Syntax theme, light, work in progress
 
 - Intended for front-end development
 - Current version works 'okay' with HTML and PHP
+- (S)CSS, CoffeeScript, Javascript and GFM still need a lot of work
 
 ## Design concept
 

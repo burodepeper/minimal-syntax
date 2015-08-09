@@ -9,7 +9,9 @@
   "description": "TODO",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "minimal",
+    "light"
   ],
   "repository": "https://github.com/burodepeper/minimal-syntax",
   "private": true,
