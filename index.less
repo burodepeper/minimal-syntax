@@ -1,11 +1,18 @@
 @white: #ffffff;
 @black: #000000;
-@grey: #888888;
+@grey:  #888888;
+
+@blue:        #0000ff;
+@blue-darker: #0000cc;
+@blue-dark:   #000099;
+@blue-pale:   #6699ff;
+@green:       #009900;
+@red:         #ee1100;
 
 atom-text-editor,
 :host {
   background-color: @white;
-  color: fade(@black, 75%);
+  color: @black;
 
   .wrap-guide {
     background-color: fade(@black, 10%);
@@ -57,251 +64,97 @@ atom-text-editor,
 atom-text-editor .search-results .marker .region,
 :host .search-results .marker .region {
   background-color: transparent;
-  border: 1px solid fade($black, 25%);
+  border: 1px solid fade(@black, 25%);
 }
 
 atom-text-editor .search-results .marker.current-result .region,
 :host .search-results .marker.current-result .region {
-  border: 1px solid fade($black, 50%);
+  border: 1px solid fade(@black, 50%);
 }
+
+
+
+
+
+
+// Language specific styling
+.source {}
+.gfm {}
+.js {}
+.php {}
+.html {}
+.text {}
+.css {}
+.scss {}
+
+
+
 
 .comment {
   color: @grey;
 }
 
-.entity {
-  &.name.type {
-    // text-decoration: underline;
-    color: @grey;
-  }
-
-  &.other.inherited-class {
-    color: @grey;
-  }
+.operator {
+  color: @black;
 }
 
-.keyword {
-  color: @grey;
-
-  &.control {
-    color: @grey;
-  }
-
-  &.operator {
-    color: @grey;
-  }
-
-  &.other.special-method {
-    color: @grey;
-  }
-
-  &.other.unit {
-    color: @grey;
-  }
+.support,
+.storage,
+.modifier,
+.tag,
+.keyword,
+.function-call,
+.function,
+.object,
+.control {
+  color: @blue;
 }
 
-.storage {
-  color: @grey;
+.constant,
+.numeric {
+  color: @red;
 }
 
-.constant {
-  color: @grey;
-
-  &.character.escape {
-    color: @grey;
-  }
-
-  &.numeric {
-    color: @grey;
-  }
-
-  &.other.color {
-    color: @grey;
-  }
-
-  &.other.symbol {
-    color: @grey;
-  }
-}
-
-.variable {
-  color: @grey;
-
-  &.interpolation {
-    color: @grey;
-  }
-
-  &.parameter.function {
-    color: @grey;
-  }
-}
-
-.invalid.illegal {
-  background-color: #ee1100;
-  color: @grey;
-}
-
+.variable,
 .string {
-  color: @grey;
+  color: @green;
+}
 
-  &.regexp {
-    color: @grey;
+.heading,
+.bold,
+.name,
+.class {
+  font-weight: bold;
+}
 
-    .source.ruby.embedded {
-      color: @grey;
-    }
-  }
-
-  &.other.link {
-    color: @grey;
-  }
+.comment,
+.italic {
+  font-style: italic;
 }
 
 .punctuation {
-  &.definition {
-    &.comment {
-      color: @grey;
-    }
-
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
-      color: @grey;
-    }
-
-    &.heading,
-    &.identity {
-      color: @grey;
-    }
-
-    &.bold {
-      color: @grey;
-      font-weight: bold;
-    }
-
-    &.italic {
-      color: @grey;
-      font-style: italic;
-    }
-  }
-
-  &.section.embedded {
-    color: @grey;
-  }
-
+  opacity: 0.75;
 }
 
-.support {
-  &.class {
-    color: @grey;
-  }
 
-  &.function  {
-    color: @grey;
 
-    &.any-method {
-      color: @grey;
-    }
-  }
-}
 
-.entity {
-  &.name.function {
-    color: @grey;
-  }
 
-  &.name.class, &.name.type.class {
-    color: @grey;
-  }
+.meta {} // ???
 
-  &.name.section {
-    color: @grey;
-  }
 
-  &.name.tag {
-    color: @grey;
-  }
 
-  &.other.attribute-name {
-    color: @grey;
 
-    &.id {
-      color: @grey;
-    }
-  }
-}
 
-.meta {
-  &.class {
-    color: @grey;
-  }
 
-  &.link {
-    color: @grey;
-  }
 
-  &.require {
-    color: @grey;
-  }
 
-  &.selector {
-    color: @grey;
-  }
-
-  &.separator {
-    color: @grey;
-  }
-}
-
-.none {
-  color: @grey;
-}
-
-.markup {
-  &.bold {
-    color: @grey;
-    font-weight: bold;
-  }
-
-  &.changed {
-    color: @grey;
-  }
-
-  &.deleted {
-    color: @grey;
-  }
-
-  &.italic {
-    color: @grey;
-    font-style: italic;
-  }
-
-  &.heading .punctuation.definition.heading {
-    color: @grey;
-  }
-
-  &.inserted {
-    color: @grey;
-  }
-
-  &.list {
-    color: @grey;
-  }
-
-  &.quote {
-    color: @grey;
-  }
-
-  &.raw.inline {
-    color: @grey;
-  }
-}
 
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
   &.heading {
-    color: @grey;
+    color: @black;
+    font-weight: bold;
   }
 }
 

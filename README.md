@@ -1,5 +1,12 @@
-# minimal-syntax theme
+# Minimal
+## syntax theme, work in progress
 
-TODO description
+- Intended for front-end development
+- Current version works 'okay' with HTML and PHP
 
-TODO screenshot
+## Design concept
+
+- blue: part of the language
+- green: parts of the user
+- red: numeric values and constants
+- black: content
