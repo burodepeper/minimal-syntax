@@ -5,9 +5,12 @@
     "email": "david@burodepeper.nl"
   },
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "TODO",
-  "keywords": [ "syntax", "theme" ],
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
   "repository": "https://github.com/burodepeper/minimal-syntax",
   "private": true,
   "license": "MIT",
