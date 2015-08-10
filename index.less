@@ -6,11 +6,12 @@
 @blue-darker:   #0000cc;
 @blue-dark:     #000099;
 @green:         #009900;
+@green-dark:    #007700;
 @green-darker:  #0099cc; // TODO wrong name
 @red:           #ee1100;
 @orange:        #ff7700;
 @orange-darker: #ff6600;
-
+@yellow:        #ffdd00;
 
 
 
@@ -63,7 +64,7 @@ atom-text-editor,
   }
 
   .selection .region {
-    background-color: fade(@black, 10%);
+    background-color: fade(@grey, 25%);
   }
 
   .search-results .marker .region,
@@ -101,6 +102,7 @@ atom-text-editor,
     }
   }
 
+  .css .mathematical-symbols,
   .support,
   .storage,
   .modifier,
@@ -114,18 +116,32 @@ atom-text-editor,
   }
 
   .constant,
+  .unit,
   .numeric {
     color: @red;
   }
 
+  .attribute, // css
   .variable {
     color: @green-darker;
   }
 
+  .gfm.quote,
+  .css.id,
+  .css.class,
+  .url,
   .string {
     color: @green;
   }
 
+  .css.class,
+  .css.id {
+    // color: @green-dark;
+  }
+
+  .css.pseudo-class,
+  .css.pseudo-element,
+  .at-rule, // less/scss
   .php.support.function,
   .php.classobj,
   .terminator,
@@ -133,6 +149,13 @@ atom-text-editor,
     color: @blue-darker;
   }
 
+
+
+
+  .at-rule, // less/scss
+  .css.id,
+  .css.pseudo-class,
+  .css.pseudo-element,
   .php.support.function,
   .php.classobj,
   .constant,
@@ -144,6 +167,8 @@ atom-text-editor,
     font-weight: bold;
   }
 
+  .css.pseudo-element,
+  .css.pseudo-class,
   .comment,
   .italic {
     font-style: italic;
@@ -167,8 +192,18 @@ atom-text-editor,
     .markup {
       -webkit-font-smoothing: auto;
     }
+
+    .list {
+      color: @grey;
+    }
+
+    .hr,
     .heading {
-      color: @blue-dark;
+      color: @blue;
+    }
+
+    .raw {
+      color: @green;
     }
   }
   .js {

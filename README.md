@@ -4,7 +4,7 @@
 
 - Intended for front-end development
 - Current version works 'okay' with HTML and PHP
-- (S)CSS, CoffeeScript, Javascript and GFM still need a lot of work
+- (S)CSS, CoffeeScript, Javascript, MySQL and GFM still need a lot of work
 
 ## Design concept
 

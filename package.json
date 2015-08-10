@@ -6,12 +6,15 @@
   },
   "theme": "syntax",
   "version": "0.2.0",
-  "description": "TODO",
+  "description": "Work in progress...",
   "keywords": [
     "syntax",
     "theme",
     "minimal",
-    "light"
+    "light",
+    "colorful",
+    "bright",
+    "high contrast"
   ],
   "repository": "https://github.com/burodepeper/minimal-syntax",
   "private": true,
