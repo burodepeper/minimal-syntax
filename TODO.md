@@ -1,9 +1,18 @@
 # TODO
 
-## CSS
+- [ ] Change description in package.json
+- [ ] Add screenshots to README.md
 
-- [ ] class-name NOT bold
+## css, scss
 
-## PHP
+- [ ] class-name NOT bold, differentiate from ids
 
-- [ ] embedded constant is not red when within a script-tag; see /2
+## html
+
+## javascript
+
+## mysql
+
+## php
+
+- [ ] Embedded constant is not red when within a script-tag; see /2
