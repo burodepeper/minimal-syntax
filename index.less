@@ -1,6 +1,6 @@
-@white: #ffffff;
-@black: #000000;
-@grey:  #888888;
+@white:         #ffffff;
+@black:         #000000;
+@grey:          #888888;
 
 @blue:          #0000ff;
 @blue-darker:   #0000cc;
@@ -39,7 +39,7 @@ atom-text-editor,
 
     .line-number {
       &.cursor-line {
-        background-color: @white;
+        // background-color: @white;
         color: @black;
       }
 
@@ -78,6 +78,12 @@ atom-text-editor,
     border: 1px solid fade(@black, 50%);
   }
 
+  .line {}
+
+  .cursor-line {
+    background-color: fade(@black, 5%);
+  }
+
 
 
 
@@ -87,10 +93,6 @@ atom-text-editor,
   // .operator.logical,
   .comment {
     color: @orange;
-
-    .type {
-      color: @orange-darker;
-    }
   }
 
   .operator {
@@ -103,6 +105,8 @@ atom-text-editor,
   }
 
   .css .mathematical-symbols,
+  // .css.pseudo-class,
+  // .css.pseudo-element,
   .support,
   .storage,
   .modifier,
@@ -115,6 +119,7 @@ atom-text-editor,
     color: @blue;
   }
 
+  .comment .type,
   .constant,
   .unit,
   .numeric {
@@ -139,9 +144,15 @@ atom-text-editor,
     // color: @green-dark;
   }
 
-  .css.pseudo-class,
-  .css.pseudo-element,
   .at-rule, // less/scss
+  .css .tag,
+  .html .attribute-name,
+  .pseudo-class,
+  .pseudo-element,
+  .sgml,
+  .css .function,
+  .js.instance,
+  .support.class, // coffee: Math
   .php.support.function,
   .php.classobj,
   .terminator,
@@ -154,8 +165,10 @@ atom-text-editor,
 
   .at-rule, // less/scss
   .css.id,
-  .css.pseudo-class,
-  .css.pseudo-element,
+  // .css.pseudo-class,
+  // .css.pseudo-element,
+  .doctype,
+  .css .function,
   .php.support.function,
   .php.classobj,
   .constant,
@@ -182,6 +195,23 @@ atom-text-editor,
 
 
 
+
+// TODO embedded styles
+.embedded {
+  &.line {
+    background-color: fade(@black, 5%);
+    padding: 1px 0;
+  }
+
+  &.begin,
+  &.end {
+    color: fade(@black, 66%);
+  }
+}
+
+.cursor-line .embedded.line {
+  background-color: transparent;
+}
 
 
 
@@ -211,7 +241,14 @@ atom-text-editor,
       color: @green-darker; // this
     }
     .constant {
-      color: @blue-dark;
+      &:not(.numeric) {
+        color: @blue-dark;
+      }
+      &.support, // x, y
+      &.dom { // width, height
+        color: @black;
+        font-weight: normal;
+      }
     }
   }
   .php {
