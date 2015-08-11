@@ -2,6 +2,14 @@
 
 - [ ] Change description in package.json
 - [ ] Add screenshots to README.md
+- [ ] Search for reference documents/code to check styling
+
+## atom
+
+- [ ] Selection
+- [ ] git-diff stuff
+- [ ] current-line
+- [ ] wider cursor
 
 ## css, scss
 
