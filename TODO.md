@@ -3,6 +3,7 @@
 - [ ] Change description in package.json
 - [ ] Add screenshots to README.md
 - [ ] Search for reference documents/code to check styling
+- [ ] Remove the wrong version of the theme
 
 ## atom
 
