@@ -254,11 +254,39 @@ atom-text-editor,
   .php {
     .storage {
       &.modifier {
-        font-weight: bold;
+        // font-weight: bold; // public, private, global
+        // text-decoration: underline;
+        font-style: italic;
+      }
+      &.class {
+        font-style: italic; // class
       }
     }
     .control {
+      // font-weight: bold; // if, then, else, return
+    }
+    .function-call {
       font-weight: bold;
+    }
+    .operator {
+      &.assignment,
+      &.key {
+        color: @black;
+      }
+      &.class { // ->, ::
+        // color: fade(@green-darker, 66%);
+        // color: inherit;
+        color: fade(@black, 66%);
+        font-weight: normal;
+      }
+      &.logical {
+        color: @red;
+      }
+    }
+    .arguments {
+      &:not(.argument) {
+        color: fade(@black, 66%);
+      }
     }
   }
   .html {}
