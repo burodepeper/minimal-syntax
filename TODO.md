@@ -25,3 +25,4 @@
 ## php
 
 - [ ] Embedded constant is not red when within a script-tag; see /2
+- [ ] Invert boldness of `if` and regular functions/methods
