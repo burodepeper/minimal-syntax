@@ -15,7 +15,7 @@
 ## css, scss, less
 
 - [x] class-name NOT bold, differentiate from ids
-- [ ] less should be dealt with the same as css?
+- [ ] less: less-functions can't be directly targeted, because they are not defined in there grammar
 
 ## gfm
 
