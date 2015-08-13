@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Change description in package.json
+- [x] Change description in package.json
 - [ ] Add screenshots to README.md
 - [ ] Search for reference documents/code to check styling
 - [ ] Remove the wrong version of the theme
@@ -24,6 +24,15 @@
 - [ ] Tables don't work at all? Aren't parsed by the grammar
 
 ## html
+
+- [ ] Create reference from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+- [ ] Pre html5 DOCTYPEs
+- [ ] Embedded css
+- [ ] Embedded javascript
+- [ ] Embedded php
+- [ ] Inline php, see php?
+- [ ] onclick=''
+- [ ] style=''
 
 ## javascript
 
