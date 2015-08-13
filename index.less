@@ -7,7 +7,7 @@
 @blue-dark:     #000099;
 @green:         #009900;
 @green-dark:    #007700;
-@green-darker:  #0099cc; // TODO wrong name
+@aqua:          #0099cc;
 @red:           #ee1100;
 @orange:        #ff7700;
 @orange-darker: #ff6600;
@@ -128,7 +128,7 @@ atom-text-editor,
 
   .attribute, // css
   .variable {
-    color: @green-darker;
+    color: @aqua;
   }
 
   .gfm.quote,
@@ -241,6 +241,34 @@ atom-text-editor,
       text-decoration: line-through;
     }
 
+    .code {
+      display: block;
+      background-color: fade(@black, 5%);
+
+      .source {
+        color: @green;
+      }
+    }
+
+    .link {
+      color: @green;
+
+      .link {
+        text-decoration: underline;
+        color: @blue;
+      }
+    }
+
+    .username,
+    .issue {
+      color: @aqua;
+    }
+
+    .mention,
+    .issue.tag {
+      color: fade(@aqua, 50%);
+    }
+
     // TODO
     .critic {
       &.addition {}
@@ -257,7 +285,7 @@ atom-text-editor,
   }
   .js {
     .variable {
-      color: @green-darker; // this
+      color: @aqua; // this
     }
     .constant {
       &:not(.numeric) {
@@ -293,7 +321,7 @@ atom-text-editor,
         color: @black;
       }
       &.class { // ->, ::
-        // color: fade(@green-darker, 66%);
+        // color: fade(@aqua, 66%);
         // color: inherit;
         color: fade(@black, 66%);
         font-weight: normal;
