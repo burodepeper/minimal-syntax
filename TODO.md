@@ -20,7 +20,7 @@
 ## gfm
 
 - [ ] Try to detect tasklists; possibly need to add that to that package
-- [ ] grammar: .deletion, .highlight and .comment aren't grammared
+- [ ] Research and style .critic classes
 
 ## html
 
