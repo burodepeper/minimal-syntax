@@ -14,7 +14,7 @@
 
 ## css, scss
 
-- [ ] class-name NOT bold, differentiate from ids
+- [x] class-name NOT bold, differentiate from ids
 
 ## gfm
 
