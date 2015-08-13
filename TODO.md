@@ -16,6 +16,10 @@
 
 - [ ] class-name NOT bold, differentiate from ids
 
+## gfm
+
+- [ ] Try to detect tasklists; possibly need to add that to that package
+
 ## html
 
 ## javascript
