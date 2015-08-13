@@ -12,9 +12,10 @@
 - [ ] current-line
 - [ ] wider cursor
 
-## css, scss
+## css, scss, less
 
 - [x] class-name NOT bold, differentiate from ids
+- [ ] less should be dealt with the same as css?
 
 ## gfm
 
