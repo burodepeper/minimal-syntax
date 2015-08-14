@@ -224,7 +224,18 @@ atom-text-editor,
     }
 
     .list {
-      color: @grey;
+      // color: @grey;
+
+      &.task {
+        &.completed {
+          font-style: italic;
+          color: fade(@black, 33%);
+
+          .text {
+            text-decoration: line-through;
+          }
+        }
+      }
     }
 
     .hr,

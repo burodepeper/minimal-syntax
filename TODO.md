@@ -19,7 +19,7 @@
 
 ## gfm
 
-- [ ] Try to detect tasklists; possibly need to add that to that package
+- [x] Try to detect tasklists; possibly need to add that to that package
 - [ ] Research and style .critic classes
 - [ ] Tables don't work at all? Aren't parsed by the grammar
 
