@@ -19,9 +19,10 @@
 
 ## gfm
 
-- [x] Try to detect tasklists; possibly need to add that to that package
+- [x] Detect tasklists; possibly need to add support for that to the `language-gfm` package
+- [x] Detect inline styles in tasklists
 - [ ] Research and style .critic classes
-- [ ] Tables don't work at all? Aren't parsed by the grammar
+- [ ] Tables don't work at all? Aren't properly parsed by the grammar, or my markup is wrong?
 
 ## html
 
