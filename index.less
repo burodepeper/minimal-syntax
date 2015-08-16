@@ -111,6 +111,7 @@ atom-text-editor,
   .storage,
   .modifier,
   .tag,
+  .tag.style.html,
   .keyword,
   .function-call,
   .function,
@@ -158,6 +159,11 @@ atom-text-editor,
   .terminator,
   .storage.modifier {
     color: @blue-darker;
+  }
+
+  .sgml,
+  .sgml .punctuation {
+    color: @red;
   }
 
 
@@ -252,13 +258,17 @@ atom-text-editor,
       text-decoration: line-through;
     }
 
+    // .raw,
     .code {
       display: block;
       background-color: fade(@black, 5%);
 
-      .source {
-        color: @green;
+      .support.gfm {
+        color: fade(@black, 50%);
       }
+      // .source {
+      //   color: @green;
+      // }
     }
 
     .link {

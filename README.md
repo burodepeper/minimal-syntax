@@ -10,7 +10,7 @@ Different shades and subtle color variants are used to create a visual hierarchy
 
 **Note**: this theme is a _work in progress_ though actively maintained.
 
-PS: this theme is loosely based upon the `Mac Classic` theme from the _good-old_ Textmate days, but built from the ground up.
+This theme is loosely based upon the `Mac Classic` theme from the _good-old_ Textmate days, but built from the ground up.
 
 ## Web development
 
