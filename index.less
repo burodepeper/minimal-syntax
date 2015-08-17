@@ -60,7 +60,9 @@ atom-text-editor,
   }
 
   .cursor {
-    color: @black;
+    color: fade(@black, 50%);
+    transition: opacity 0.167s;
+    border-left-width: 2px;
   }
 
   .selection .region {
@@ -147,11 +149,11 @@ atom-text-editor,
 
   .at-rule, // less/scss
   .css .tag,
-  .html .attribute-name,
+  .html.attribute-name,
   .pseudo-class,
   .pseudo-element,
   .sgml,
-  .css .function,
+  .css.function,
   .js.instance,
   .support.class, // coffee: Math
   .php.support.function,
@@ -193,6 +195,7 @@ atom-text-editor,
     font-style: italic;
   }
 
+  .gfm.quote .gfm.support,
   .terminator,
   .punctuation {
     opacity: 0.667;
@@ -247,10 +250,19 @@ atom-text-editor,
     .hr,
     .heading {
       color: @blue;
+
+      .marker {
+        font-weight: normal;
+        opacity: 0.667;
+      }
     }
 
     .raw {
       color: @green;
+
+      .support.gfm {
+        color: fade(@black, 50%);
+      }
     }
 
     .strike {
@@ -261,7 +273,7 @@ atom-text-editor,
     // .raw,
     .code {
       display: block;
-      background-color: fade(@black, 5%);
+      // background-color: fade(@black, 5%);
 
       .support.gfm {
         color: fade(@black, 50%);
