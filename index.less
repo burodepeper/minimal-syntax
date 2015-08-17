@@ -81,6 +81,7 @@ atom-text-editor,
         .region {
           // border-bottom: 2px solid fade(@black, 10%);
           background: fade(@black, 10%);
+          border: none;
         }
       }
 
@@ -169,7 +170,7 @@ atom-text-editor,
   }
 
   .at-rule, // less/scss
-  .css .tag,
+  .css.tag,
   .html.attribute-name,
   .pseudo-class,
   .pseudo-element,
@@ -346,6 +347,25 @@ atom-text-editor,
     //   text-decoration: line-through;
     // }
   }
+
+  .html {
+    &.css.embedded,
+    &.css.tag,
+    &.style.tag,
+    &.script {
+      color: @blue-dark;
+    }
+
+    .embedded {
+      &.js {
+        .html.tag {
+          color: @blue-dark;
+        }
+      }
+    }
+  }
+
+
   .js {
     .variable {
       color: @aqua; // this
