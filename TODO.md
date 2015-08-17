@@ -3,10 +3,9 @@
 - [x] Change description in package.json
 - [ ] Add screenshots to README.md
 - [ ] Remove the wrong version of the theme
-- [ ] Add CHANGELOG.md
-- [ ] Add levels of satisfiedness to README.md
+- [x] Add CHANGELOG.md
 
-## atom
+## atom / interface
 
 - [x] Selection
 - [x] Search results
@@ -29,14 +28,11 @@
 
 ## html
 
-- [ ] Create reference from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 - [ ] Pre html5 DOCTYPEs
-- [ ] Embedded css
-- [ ] Embedded javascript
-- [ ] Embedded php
+- [x] Embedded css
+- [x] Embedded javascript
+- [ ] Embedded block of php
 - [ ] Inline php, see php?
-- [ ] onclick=''
-- [ ] style=''
 
 ## javascript
 
