@@ -34,13 +34,13 @@ atom-text-editor,
   }
 
   .gutter {
-    background-color: @white;
+    background: @white;
     color: fade(@black, 50%);
 
     .line-number {
       &.cursor-line {
-        // background-color: @white;
-        color: @black;
+        // background-color: fade(@yellow, 33%);
+        color: fade(@black, 75%);
       }
 
       &.cursor-line-no-selection {
@@ -52,7 +52,7 @@ atom-text-editor,
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @black;
+    color: @red;
   }
 
   .invisible {
@@ -60,24 +60,47 @@ atom-text-editor,
   }
 
   .cursor {
-    color: fade(@black, 50%);
+    color: @black;
     transition: opacity 0.167s;
     border-left-width: 2px;
   }
 
-  .selection .region {
-    background-color: fade(@grey, 25%);
-  }
+  .highlights {
+    .highlight {
+      .region {
+        background: fade(@black, 10%);
+      }
 
-  .search-results .marker .region,
-  .search-results .marker .region {
-    background-color: transparent;
-    border: 1px solid fade(@black, 25%);
-  }
+      &.selection {
+        .region {
+          background: fade(@black, 10%);
+        }
+      }
 
-  .search-results .marker.current-result .region,
-  .search-results .marker.current-result .region {
-    border: 1px solid fade(@black, 50%);
+      &.bracket-matcher {
+        .region {
+          // border-bottom: 2px solid fade(@black, 10%);
+          background: fade(@black, 10%);
+        }
+      }
+
+      &.current-result,
+      &.find-result {
+        .region {
+          background: fade(@yellow, 33%);
+          border: none;
+          border-radius: 0;
+          outline: 2px solid fade(@yellow, 67%);
+        }
+      }
+
+      &.current-result {
+        .region {
+          background: @yellow;
+          outline: 2px solid @yellow;
+        }
+      }
+    }
   }
 
   .line {}

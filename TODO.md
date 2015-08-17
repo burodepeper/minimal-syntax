@@ -2,15 +2,18 @@
 
 - [x] Change description in package.json
 - [ ] Add screenshots to README.md
-- [ ] Search for reference documents/code to check styling
 - [ ] Remove the wrong version of the theme
+- [ ] Add CHANGELOG.md
+- [ ] Add levels of satisfiedness to README.md
 
 ## atom
 
-- [ ] Selection
+- [x] Selection
+- [x] Search results
 - [ ] git-diff stuff
-- [ ] current-line
-- [ ] wider cursor
+- [x] current-line
+- [x] wider cursor
+- [x] bracket-matcher
 
 ## css, scss, less
 
