@@ -198,7 +198,7 @@ atom-text-editor,
 
 
 
-  .at-rule, // less/scss
+  .at-rule .keyword, // less/scss
   .css.id,
   // .css.pseudo-class,
   // .css.pseudo-element,
@@ -448,7 +448,9 @@ atom-text-editor,
       }
     }
   }
+
   .html {}
+    
   .text {}
 
   .css,
@@ -456,11 +458,21 @@ atom-text-editor,
     .attribute-name {
       font-weight: normal;
     }
+
     .id {
       font-weight: bold;
     }
+
     .property-value {
       color: @blue;
+    }
+
+    &.reference {
+      color: @blue-darker;
+    }
+
+    &.important {
+      color: @red;
     }
     // Maybe in the future...
     // &.property-name {
