@@ -1,23 +1,27 @@
 # TODO
 
 - [x] Change description in package.json
+- [x] Add CHANGELOG.md
 - [ ] Add screenshots to README.md
 - [ ] Remove the wrong version of the theme
-- [x] Add CHANGELOG.md
 
 ## atom / interface
 
 - [x] Selection
 - [x] Search results
-- [ ] git-diff stuff
 - [x] current-line
 - [x] wider cursor
 - [x] bracket-matcher
+- [ ] git-diff stuff
 
 ## css, scss, less
 
+#### Notes
+
+- `less-functions` can't be directly targeted, because they are not defined in their grammar
+
 - [x] class-name NOT bold, differentiate from ids
-- NOTE `less-functions` can't be directly targeted, because they are not defined in their grammar
+- [ ] display prefixed attributes as punctuation?
 
 ## gfm
 
@@ -31,11 +35,12 @@
 
 ## html
 
-- [ ] Pre html5 DOCTYPEs
 - [x] Embedded css
 - [x] Embedded javascript
+- [ ] Pre html5 DOCTYPEs
 - [ ] Embedded block of php
 - [ ] Inline php, see php?
+- [ ] Can we target inline tags?
 
 ## javascript
 
@@ -43,5 +48,6 @@
 
 ## php
 
-- [ ] Embedded constant is not red when within a script-tag; see /2
 - [x] Invert boldness of `if` and regular functions/methods
+- [ ] Embedded constant is not red when within a script-tag
+- [ ] The closing double quote of an empty string is not green
