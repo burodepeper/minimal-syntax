@@ -23,8 +23,11 @@
 
 - [x] Detect tasklists; possibly need to add support for that to the `language-gfm` package
 - [x] Detect inline styles in tasklists
+- [x] Tables don't work at all? Aren't properly parsed by the grammar, or my markup is wrong?
+- [x] ## I shouldn't be a header
 - [ ] Research and style .critic classes
-- [ ] Tables don't work at all? Aren't properly parsed by the grammar, or my markup is wrong?
+- [ ] Tables without leading pipes are not parsed
+- [ ] Remove all color from completed tasks?
 
 ## html
 
