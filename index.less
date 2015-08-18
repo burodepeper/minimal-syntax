@@ -240,7 +240,7 @@ atom-text-editor,
 .embedded {
   &.line {
     background-color: fade(@black, 5%);
-    padding: 1px 0;
+    // padding: 1px 0;
   }
 
   &.begin,
@@ -378,7 +378,7 @@ atom-text-editor,
     .variable {
       color: @aqua; // this
     }
-    .constant {
+    &.constant {
       &:not(.numeric) {
         color: @blue-dark;
       }
@@ -416,6 +416,15 @@ atom-text-editor,
     &.construct // echo
     {
       color: @blue-darker;
+    }
+
+    &.string,
+    &.string-contents {
+      color: @green;
+    }
+
+    &.constant {
+      color: @red;
     }
 
     .operator {

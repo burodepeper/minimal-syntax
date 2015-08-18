@@ -1,8 +1,7 @@
 # Minimal Syntax theme
 
-## ...
-
-- 
+## v0.4.6
+- Update php string and constants
 
 ## v0.4.5
 - Add interface related styles
