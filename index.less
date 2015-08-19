@@ -238,6 +238,7 @@ atom-text-editor,
 
 // TODO embedded styles
 .embedded {
+  // &.block,
   &.line {
     background-color: fade(@black, 5%);
     // padding: 1px 0;
@@ -250,7 +251,8 @@ atom-text-editor,
 }
 
 .cursor-line .embedded.line {
-  background-color: transparent;
+  // background-color: transparent;
+  // background-color: @white;
 }
 
 
@@ -395,11 +397,14 @@ atom-text-editor,
     &.storage.modifier.extends, // extends
     &.storage.modifier.abstract, // abstract
     &.basic-functions, // define()
+    &.function.support,
     &.function.math, // floor()
     &.function.file, // realpath(), file_exists(), is_writable()
     &.function.dir, // opendir(), readdir()
     &.function.info, // ini_get()
     &.function.array, // array_merge()
+    &.storage.type.class, // class
+    &.storage.type.function, // function
     &.support.construct, // array(), isset(), empty()
     &.class.variable // Validate::$type ($type)
     {
@@ -407,11 +412,12 @@ atom-text-editor,
     }
 
     &.storage.modifier, // public, private, global
-    &.storage.type, // parent, class
+    &.storage.type, // parent
     &.new, // new
     &.session, // session_start()
     &.import, // require(), include()
     &.network, // header()
+    &.support.network, // header()
     &.control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
     &.construct // echo
     {
@@ -425,6 +431,12 @@ atom-text-editor,
 
     &.constant {
       color: @red;
+    }
+
+    &.network,
+    &.import
+    {
+      font-weight: bold;
     }
 
     .operator {
@@ -442,7 +454,7 @@ atom-text-editor,
         color: @red;
       }
     }
-    .arguments {
+    &.arguments {
       &:not(.argument) {
         color: fade(@black, 66%);
       }
@@ -450,7 +462,7 @@ atom-text-editor,
   }
 
   .html {}
-    
+
   .text {}
 
   .css,

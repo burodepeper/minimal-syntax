@@ -1,5 +1,8 @@
 # Minimal Syntax theme
 
+## v0.4.7
+- Improve php functions
+
 ## v0.4.6
 - Update php string and constants
 - Update css reference, important and at-rule
