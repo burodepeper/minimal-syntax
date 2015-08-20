@@ -110,12 +110,7 @@ atom-text-editor,
     background-color: fade(@black, 5%);
   }
 
-}
-
-// ---------- syntax ----------
-
-:host,
-atom-text-editor {
+  // ---------- default syntax ----------
 
   .comment
   {
@@ -381,6 +376,10 @@ atom-text-editor {
         font-weight: normal;
       }
     }
+
+    &.constant.boolean {
+      color: @red;
+    }
   }
 
   // ---------- php ----------
@@ -507,6 +506,10 @@ atom-text-editor {
   // ---------- less ----------
 
   .less {}
+
+  // ---------- apache-config ----------
+
+  .apache-config {}
 
 }
 
