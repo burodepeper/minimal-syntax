@@ -166,6 +166,7 @@ atom-text-editor,
 
   .at-rule, // less/scss
   .css.tag,
+  .scss.tag,
   .html.attribute-name,
   .pseudo-class,
   .pseudo-element,
@@ -466,7 +467,21 @@ atom-text-editor,
       font-weight: normal;
     }
 
-    .id {
+    &.class,
+    &.id {
+      .punctuation.definition.entity { // # in #id
+        color: inherit;
+      }
+    }
+
+    &.parent-selector {
+      .punctuation {
+        opacity: 1;
+      }
+    }
+
+    &.punctuation.definition.entity, // &
+    &.id {
       font-weight: bold;
     }
 
@@ -474,6 +489,7 @@ atom-text-editor,
       color: @blue;
     }
 
+    &.punctuation.definition.entity, // &
     &.reference {
       color: @blue-darker;
     }
