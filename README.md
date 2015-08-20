@@ -10,7 +10,7 @@ Different shades and subtle color variants are used to create a visual hierarchy
 
 ## Web development
 
-I've created this theme purely for personal use and from personal experience. It is therefor optimised and actively maintained for the languages I regularly use: `html`, `php`, `coffeescript`, `javascript`, `scss`, `css`, `mysql` and `markdown`.
+I've created this theme purely for personal use and from personal experience. It is therefor optimised and actively maintained for the languages I regularly use: `html`, `php`, `coffeescript`, `javascript`, `scss`, `css`, `mysql`, `apache` and `markdown`.
 
 Suggestions in general or for a better integration with other languages are highly appreciated. This theme is still a _work in progress_ though **actively maintained**.
 

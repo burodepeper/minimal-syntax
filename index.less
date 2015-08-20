@@ -1,7 +1,8 @@
+// ---------- variables ----------
+
 @white:         #ffffff;
 @black:         #000000;
 @grey:          #888888;
-
 @blue:          #0000ff;
 @blue-darker:   #0000cc;
 @blue-dark:     #000099;
@@ -13,8 +14,7 @@
 @orange-darker: #ff6600;
 @yellow:        #ffdd00;
 
-
-
+// ---------- editor interface ----------
 
 atom-text-editor,
 :host {
@@ -110,14 +110,15 @@ atom-text-editor,
     background-color: fade(@black, 5%);
   }
 
+}
 
+// ---------- syntax ----------
 
+:host,
+atom-text-editor {
 
-
-
-
-  // .operator.logical,
-  .comment {
+  .comment
+  {
     color: @orange;
   }
 
@@ -140,19 +141,22 @@ atom-text-editor,
   .function-call,
   .function,
   .object,
-  .control {
+  .control
+  {
     color: @blue;
   }
 
   .comment .type,
   .constant,
   .unit,
-  .numeric {
+  .numeric
+  {
     color: @red;
   }
 
   .attribute, // css
-  .variable {
+  .variable
+  {
     color: @aqua;
   }
 
@@ -160,13 +164,9 @@ atom-text-editor,
   .css.id,
   .css.class,
   .url,
-  .string {
+  .string
+  {
     color: @green;
-  }
-
-  .css.class,
-  .css.id {
-    // color: @green-dark;
   }
 
   .at-rule, // less/scss
@@ -178,15 +178,15 @@ atom-text-editor,
   .css.function,
   .js.instance,
   .support.class, // coffee: Math
-  // .php.support.function,
   .php.classobj,
-  .terminator {
-  // .storage.modifier {
+  .terminator
+  {
     color: @blue-darker;
   }
 
   .sgml,
-  .sgml .punctuation {
+  .sgml .punctuation
+  {
     color: @red;
   }
 
@@ -196,35 +196,35 @@ atom-text-editor,
     color: @blue-dark;
   }
 
-
+  .meta {} // ???
 
   .at-rule .keyword, // less/scss
   .css.id,
-  // .css.pseudo-class,
-  // .css.pseudo-element,
   .doctype,
   .css .function,
-  // .php.support.function,
   .php.classobj,
   .constant,
   .heading,
   .bold,
   .name,
   .magic,
-  .class {
+  .class
+  {
     font-weight: bold;
   }
 
   .css.pseudo-element,
   .css.pseudo-class,
   .comment,
-  .italic {
+  .italic
+  {
     font-style: italic;
   }
 
   .gfm.quote .gfm.support,
   .terminator,
-  .punctuation {
+  .punctuation
+  {
     opacity: 0.667;
   }
 
@@ -233,41 +233,35 @@ atom-text-editor,
     font-weight: normal;
   }
 
+  // ---------- embedded styles ----------
 
+  .embedded {
+    &.line {
+      background-color: fade(@black, 5%);
+    }
 
-
-// TODO embedded styles
-.embedded {
-  // &.block,
-  &.line {
-    background-color: fade(@black, 5%);
-    // padding: 1px 0;
+    &.begin,
+    &.end {
+      color: fade(@black, 66%);
+    }
   }
 
-  &.begin,
-  &.end {
-    color: fade(@black, 66%);
-  }
-}
+  // .cursor-line .embedded.line {
+  //   background-color: transparent;
+  // }
 
-.cursor-line .embedded.line {
-  // background-color: transparent;
-  // background-color: @white;
-}
+  // ---------- source ----------
 
-
-
-
-  // Language specific styling
   .source {}
+
+  // ---------- gfm ----------
+
   .gfm {
     .markup {
       -webkit-font-smoothing: auto;
     }
 
     .list {
-      // color: @grey;
-
       &.task {
         &.completed {
           font-style: italic;
@@ -303,17 +297,12 @@ atom-text-editor,
       text-decoration: line-through;
     }
 
-    // .raw,
     .code {
       display: block;
-      // background-color: fade(@black, 5%);
 
       .support.gfm {
         color: fade(@black, 50%);
       }
-      // .source {
-      //   color: @green;
-      // }
     }
 
     .link {
@@ -351,16 +340,15 @@ atom-text-editor,
       &.comment {}
       &.substitution {}
     }
-
-    // .deletion {
-    //   color: @red;
-    //   text-decoration: line-through;
-    // }
   }
+
+  // ---------- html ----------
 
   .html {
     &.css.embedded,
     &.css.tag,
+    &.scss.embedded,
+    &.scss.tag,
     &.style.tag,
     &.script {
       color: @blue-dark;
@@ -375,15 +363,18 @@ atom-text-editor,
     }
   }
 
+  // ---------- javascript ----------
 
   .js {
     .variable {
       color: @aqua; // this
     }
+
     &.constant {
       &:not(.numeric) {
         color: @blue-dark;
       }
+
       &.support, // x, y
       &.dom { // width, height
         color: @black;
@@ -391,6 +382,8 @@ atom-text-editor,
       }
     }
   }
+
+  // ---------- php ----------
 
   .php {
 
@@ -444,16 +437,17 @@ atom-text-editor,
       &.key {
         color: @black;
       }
+
       &.class { // ->, ::
-        // color: fade(@aqua, 66%);
-        // color: inherit;
         color: fade(@black, 66%);
         font-weight: normal;
       }
+
       &.logical {
         color: @red;
       }
     }
+
     &.arguments {
       &:not(.argument) {
         color: fade(@black, 66%);
@@ -461,9 +455,11 @@ atom-text-editor,
     }
   }
 
-  .html {}
+  // ---------- text ----------
 
   .text {}
+
+  // ---------- (s)css ----------
 
   .css,
   .scss {
@@ -495,45 +491,26 @@ atom-text-editor,
     // }
   }
 
+  // ---------- sql ----------
+
   .sql {
     &.keyword {
       font-weight: bold;
     }
+
     &.keyword.operator {
       font-weight: normal;
       color: @green;
     }
   }
 
+  // ---------- less ----------
+
   .less {}
 
-
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.meta {} // ???
-
-
-
-
-
-
-
-
-
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
-  padding-left: 1px;
-}
+// atom-text-editor[mini] .scroll-view,
+// :host([mini]) .scroll-view {
+//   padding-left: 1px;
+// }
