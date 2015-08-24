@@ -6,15 +6,18 @@ I've attempted to consistently limit myself to three primary colors to style sim
 - <span style='color:#090'>**Green**</span>: is used for `strings` and `attributes`
 - <span style='color:#00f'>**Blue**</span>: is used for `language` elements
 
-Different shades and subtle color variants are used to create a visual hierarchy that's quick to read/scan.
+Different shades and subtle color variants are used to create a visual hierarchy that's quick to read/scan, and easy to understand.
 
-## Web development
+This theme is still a _work in progress_ though **actively maintained**. Suggestions are always welcome and highly appreciated.
 
-I've created this theme purely for personal use and from personal experience. It is therefor optimised and actively maintained for the languages I regularly use: `html`, `php`, `coffeescript`, `javascript`, `scss`, `css`, `mysql`, `apache` and `markdown`.
+### From personal experience
 
-Suggestions in general or for a better integration with other languages are highly appreciated. This theme is still a _work in progress_ though **actively maintained**.
-
+I've created this theme for myself and from personal experience. It is/will be optimised for the languages I regularly use: `html`, `php`, `coffeescript`, `javascript`, `scss`, `css`, `less`, `mysql`, `apache` and `markdown`.
 
 ### Screenshots
 
-TODO
+#### html
+![](screenshots/minimal-html.png)
+
+#### css
+![](screenshots/minimal-css.png)

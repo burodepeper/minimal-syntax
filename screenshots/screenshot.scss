@@ -1,0 +1,24 @@
+body {
+  font: 16px/24px "Arial", sans-serif;
+  background: $background-color;
+  color: rgba($foreground-color, 0.75);
+}
+
+// TODO Add something important here
+#article-42 {}
+
+.article {
+  header {
+    h1 {
+      font-size: 24px; line-height: 36px;
+      font-weight: bold;
+    }
+    h2 {
+      font-weight: bold;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
