@@ -17,7 +17,7 @@ I've created this theme for myself and from personal experience. It is/will be o
 ### Screenshots
 
 #### html
-![](screenshots/minimal-html.png)
+![](https://github.com/burodepeper/minimal-syntax/raw/master/screenshots/minimal-html.png)
 
 #### css
-![](screenshots/minimal-css.png)
+![](https://github.com/burodepeper/minimal-syntax/raw/master/screenshots/minimal-css.png)
