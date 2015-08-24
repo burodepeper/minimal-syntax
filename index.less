@@ -258,13 +258,19 @@ atom-text-editor,
     }
 
     .list {
+      &.variable,
+      .punctuation {
+        color: @blue-darker;
+      }
+
       &.task {
         &.completed {
           font-style: italic;
           color: fade(@black, 33%);
 
-          .text {
-            text-decoration: line-through;
+          .markup,
+          .punctuation {
+            color: inherit;
           }
         }
       }
