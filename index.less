@@ -260,7 +260,9 @@ atom-text-editor,
     .list {
       &.variable,
       .punctuation {
-        color: @blue-darker;
+        // color: @blue-darker;
+        color: inherit;
+        opacity: 0.5;
       }
 
       &.task {
@@ -276,13 +278,23 @@ atom-text-editor,
       }
     }
 
-    .hr,
+    .hr {
+      color: fade(@black, 50%);
+    }
+
     .heading {
       color: @blue;
 
+      &.heading-2 { color: average(@blue, @blue-darker); }
+      &.heading-3 { color: @blue-darker; }
+      &.heading-4 { color: average(@blue-darker, @blue-dark); }
+      &.heading-5 { color: @blue-dark; }
+      &.heading-6 { color: @blue-dark; }
+
       .marker {
         font-weight: normal;
-        opacity: 0.667;
+        opacity: 0.5;
+        color: inherit;
       }
     }
 
