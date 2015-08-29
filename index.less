@@ -445,11 +445,26 @@ atom-text-editor,
     }
   }
 
-  // ---------- coffee ----------
+  // ---------- @coffee ----------
 
   .coffee {
     &.embedded.source {
       color: @aqua;
+    }
+
+    .punctuation.separator,
+    &.comma,
+    &.keyword.operator {
+      color: @black;
+    }
+
+    &.keyword.new {
+      color: @blue;
+    }
+
+    &.delimited,
+    &.comma {
+      opacity: 0.5
     }
   }
 
