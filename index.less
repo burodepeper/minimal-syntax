@@ -232,23 +232,34 @@ atom-text-editor,
   // ---------- embedded styles ----------
 
   .embedded {
-    &.line {
-      background-color: fade(@black, 5%);
-    }
-
     &.begin,
     &.end {
-      color: fade(@black, 66%);
+      color: @black;
     }
-  }
 
-  // .cursor-line .embedded.line {
-  //   background-color: transparent;
-  // }
+    &.line {
+      background-color: fade(@black, 5%);
+
+      .begin,
+      .end {
+        opacity: 0.333;
+      }
+    }
+
+    &.block {
+      .begin,
+      .end {
+        opacity: 0.5;
+      }
+    }
+
+  }
 
   // ---------- source ----------
 
-  .source {}
+  .source {
+    color: @black;
+  }
 
   // ---------- gfm ----------
 
@@ -258,9 +269,7 @@ atom-text-editor,
     }
 
     .list {
-      &.variable,
-      .punctuation {
-        // color: @blue-darker;
+      &.variable {
         color: inherit;
         opacity: 0.5;
       }
@@ -268,11 +277,11 @@ atom-text-editor,
       &.task {
         &.completed {
           font-style: italic;
-          color: fade(@black, 33%);
+          // color: fade(@black, 33%);
+          opacity: 0.333;
 
-          .markup,
-          .punctuation {
-            color: inherit;
+          .variable {
+            opacity: 0.75;
           }
         }
       }
@@ -285,11 +294,24 @@ atom-text-editor,
     .heading {
       color: @blue;
 
-      &.heading-2 { color: average(@blue, @blue-darker); }
-      &.heading-3 { color: @blue-darker; }
-      &.heading-4 { color: average(@blue-darker, @blue-dark); }
-      &.heading-5 { color: @blue-dark; }
-      &.heading-6 { color: @blue-dark; }
+      // &.heading-2 { color: average(@blue, @blue-darker); }
+      // &.heading-3 { color: @blue-darker; }
+      // &.heading-4 { color: average(@blue-darker, @blue-dark); }
+      // &.heading-5 { color: @blue-dark; }
+      // &.heading-6 { color: @blue-dark; }
+
+      // &.heading-2,
+      // &.heading-3
+      // {
+      //   color: average(@blue, @blue-darker);
+      // }
+      //
+      // &.heading-4,
+      // &.heading-5,
+      // &.heading-6
+      // {
+      //   color: @blue-darker;
+      // }
 
       .marker {
         font-weight: normal;
@@ -623,8 +645,16 @@ atom-text-editor,
       background: fade(@black, 10%);
     }
 
-    &.bold {
+    &.emphasis {
+      font-style: italic;
+    }
+
+    &.strong {
       font-weight: bold;
+
+      &.emphasis {
+        font-style: normal;
+      }
     }
   }
 
