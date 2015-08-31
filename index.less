@@ -63,14 +63,37 @@ atom-text-editor,
 
     .line-number {
       &.cursor-line {
-        // background-color: fade(@yellow, 33%);
         color: fade(@black, 75%);
       }
 
       &.cursor-line-no-selection {
         color: fade(@black, 50%);
       }
+
+      &.git-line-added {
+        color: @green;
+      }
+
+      &.git-line-modified {
+        color: @orange;
+      }
     }
+
+    &.git-diff-icon {
+
+      .line-number.git-line-added:before {
+        color: @green !important;
+      }
+
+      .line-number.git-line-modified:before {
+        color: @orange !important;
+      }
+
+      .line-number.git-line-removed:before {
+        color: @red !important;
+      }
+    }
+
   }
 
   .gutter .line-number.folded,
@@ -162,7 +185,6 @@ atom-text-editor,
     color: @blue;
   }
 
-  .comment .type,
   .constant,
   .unit,
   .numeric
@@ -227,6 +249,25 @@ atom-text-editor,
   .punctuation {
     color: inherit;
     font-weight: normal;
+  }
+
+  // ---------- TODO and stuff ----------
+
+  .text.plain,
+  .comment {
+    .type {
+      color: @orange;
+
+      &.todo {
+        color: average(@red, @orange);
+      }
+
+      &.fixme,
+      &.review,
+      &.hack {
+        color: @red;
+      }
+    }
   }
 
   // ---------- embedded styles ----------
@@ -454,7 +495,8 @@ atom-text-editor,
 
     .punctuation.separator,
     &.comma,
-    &.keyword.operator {
+    // &.keyword.operator // '=', but also 'and', stupid parser
+    {
       color: @black;
     }
 
