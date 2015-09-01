@@ -44,6 +44,11 @@ atom-text-editor,
         }
       }
     }
+
+    // NOTE removes subpixel AA from tiles, richer colors but wrong
+    // .tile {
+    //   opacity: 0.999;
+    // }
   }
 
   background-color: @white;
@@ -82,10 +87,12 @@ atom-text-editor,
     &.git-diff-icon {
 
       .line-number.git-line-added:before {
+        opacity: 0.5;
         color: @green !important;
       }
 
       .line-number.git-line-modified:before {
+        opacity: 0.5;
         color: @orange !important;
       }
 
@@ -251,21 +258,30 @@ atom-text-editor,
     font-weight: normal;
   }
 
-  // ---------- TODO and stuff ----------
+  // ---------- @TODO and stuff ----------
 
   .text.plain,
   .comment {
     .type {
       color: @orange;
+      font-style: normal;
 
-      &.todo {
-        color: average(@red, @orange);
-      }
+      // &.todo {
+      //   color: average(@red, @orange);
+      // }
 
-      &.fixme,
+      // &.fixme,
+      &.todo,
       &.review,
       &.hack {
         color: @red;
+      }
+
+      &.fixme {
+        // border-bottom: 2px solid @red;
+        outline: 2px solid @red;
+        background: @red;
+        color: @white;
       }
     }
   }
@@ -452,7 +468,7 @@ atom-text-editor,
     // }
   }
 
-  // ---------- javascript ----------
+  // ---------- @javascript ----------
 
   .js {
     .variable {
@@ -464,7 +480,7 @@ atom-text-editor,
         color: @blue-dark;
       }
 
-      &.support, // x, y
+      &.support, // x, y, prototype :(
       &.dom { // width, height
         color: @black;
         font-weight: normal;
