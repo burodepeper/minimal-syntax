@@ -318,11 +318,25 @@ atom-text-editor,
     color: @black;
   }
 
-  // ---------- gfm ----------
+  // ---------- @gfm ----------
 
   .gfm {
     .markup {
       -webkit-font-smoothing: auto;
+    }
+
+    &.linebreak {
+      // background: @yellow;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        bottom: 0; right: 0;
+        content:'↵';
+        font-size: 150%;
+        line-height: 1;
+        color: fade(@black, 25%);
+      }
     }
 
     .list {
