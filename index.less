@@ -10,8 +10,8 @@
 @green-dark:    #007700;
 @aqua:          #0099cc;
 @red:           #ee1100;
-@orange:        #ff7700;
-@orange-darker: #ff6600;
+@orange:        #ff8000;
+@orange-darker: #cc6600;
 @yellow:        #ffdd00;
 
 // ---------- editor interface ----------
@@ -26,13 +26,12 @@ atom-text-editor,
 
     atom-text-editor-minimap {
       background-color: fade(@black, 5%);
-      overflow: visible; // hope this doesn't break anything; was hidden
+      overflow: visible; // hope this doesn't break anything; was originally hidden
 
       &::shadow {
         .minimap-visible-area {
           background-color: fade(@aqua, 25%);
           opacity: 1;
-          // border-left: 2px solid fade(@black, 25%);
 
           &:after {
             content: '';
@@ -449,11 +448,28 @@ atom-text-editor,
 
     // TODO
     .critic {
-      &.addition {}
-      &.deletion {}
-      &.highlight {}
-      &.comment {}
-      &.substitution {}
+      .marker {
+        opacity: 0.5;
+      }
+      .operator {
+        font-weight: bold;
+      }
+      &.addition {
+        color: @green;
+      }
+      &.deletion {
+        color: @red;
+        text-decoration: line-through;
+      }
+      &.highlight {
+        background: @yellow;
+      }
+      &.comment {
+        color: @orange;
+      }
+      &.substitution {
+        color: @blue;
+      }
     }
   }
 
@@ -717,11 +733,21 @@ atom-text-editor,
     }
   }
 
-  // ---------- dfm ----------
+  // ---------- markdown ----------
 
   .md {
     &.heading {
       color: @blue;
+
+      &.empty {
+        .punctuation {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.hr {
+      color: @red;
     }
 
     &.punctuation {
