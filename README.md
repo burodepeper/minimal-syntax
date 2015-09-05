@@ -6,7 +6,7 @@ I've attempted to consistently limit myself to three primary colors to style sim
 - <span style='color:#090'>**Green**</span>: is used for `strings` and `attributes`
 - <span style='color:#00f'>**Blue**</span>: is used for `language` elements
 
-Different shades and subtle color variants are used to create a visual hierarchy that's quick to read/scan, and easy to understand.
+Different shades and subtle color variants are used to create a visual hierarchy that's quick to read, and easy to understand.
 
 This theme is still a _work in progress_ though **actively maintained**. Suggestions are always welcome and highly appreciated.
 
