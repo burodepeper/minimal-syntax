@@ -1,0 +1,31 @@
+.js {
+  .variable {
+    color: @aqua; // this
+  }
+
+  &.constant {
+    &:not(.numeric) {
+      color: @blue-dark;
+    }
+
+    &.support, // x, y, prototype :(
+    &.dom { // width, height
+      color: @black;
+      font-weight: normal;
+    }
+  }
+
+  &.instance {
+    color: @blue-darker;
+  }
+
+  &.constant.boolean {
+    color: @red;
+  }
+
+  &.embedded {
+    .html.tag {
+      color: @blue-dark;
+    }
+  }
+}

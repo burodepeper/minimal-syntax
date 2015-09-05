@@ -1,0 +1,133 @@
+.gfm {
+  .markup {
+    -webkit-font-smoothing: auto;
+  }
+
+  &.linebreak {
+    // background: @yellow;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      bottom: 0; right: 0;
+      content:'↵';
+      font-size: 150%;
+      line-height: 1;
+      color: fade(@black, 25%);
+    }
+  }
+
+  .list {
+    &.variable {
+      color: inherit;
+      opacity: 0.5;
+    }
+
+    &.task {
+      &.completed {
+        font-style: italic;
+        // color: fade(@black, 33%);
+        opacity: 0.333;
+
+        .variable {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+
+  .hr {
+    color: fade(@black, 50%);
+  }
+
+  .heading {
+    color: @blue;
+
+    .marker {
+      font-weight: normal;
+      opacity: 0.5;
+      color: inherit;
+    }
+  }
+
+  .raw {
+    color: @green;
+
+    .support.gfm {
+      color: fade(@black, 50%);
+    }
+  }
+
+  .strike {
+    color: fade(@black, 33%);
+    text-decoration: line-through;
+  }
+
+  .code {
+    display: block;
+
+    .support.gfm {
+      color: fade(@black, 50%);
+    }
+  }
+
+  .link {
+    color: @green;
+
+    .link {
+      text-decoration: underline;
+      color: @blue;
+    }
+  }
+
+  .table {
+    color: @blue-dark;
+
+    .border {
+      color: @blue;
+    }
+  }
+
+  .username,
+  .issue {
+    color: @aqua;
+  }
+
+  .mention,
+  .issue.tag {
+    color: fade(@aqua, 50%);
+  }
+
+  &.quote {
+    color: @green;
+
+    .gfm.support {
+      opacity: 0.667;
+    }
+  }
+
+  .critic {
+    .marker {
+      opacity: 0.5;
+    }
+    .operator {
+      font-weight: bold;
+    }
+    &.addition {
+      color: @green;
+    }
+    &.deletion {
+      color: @red;
+      text-decoration: line-through;
+    }
+    &.highlight {
+      background: @yellow;
+    }
+    &.comment {
+      color: @orange;
+    }
+    &.substitution {
+      color: @blue;
+    }
+  }
+}

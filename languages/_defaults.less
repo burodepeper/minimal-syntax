@@ -1,0 +1,92 @@
+.comment
+{
+  color: @orange;
+}
+
+.operator {
+  color: @black;
+
+  &.logical {
+    color: @black;
+    font-weight: bold;
+  }
+}
+
+.support,
+.storage,
+.modifier,
+.tag,
+.keyword,
+.function-call,
+.function,
+.object,
+.control
+{
+  color: @blue;
+}
+
+.constant,
+.unit,
+.numeric
+{
+  color: @red;
+}
+
+.attribute, // css
+.variable
+{
+  color: @aqua;
+}
+
+.url,
+.string
+{
+  color: @green;
+}
+
+.at-rule, // less/scss
+.pseudo-class,
+.pseudo-element,
+.sgml,
+.support.class, // coffee: Math
+.terminator
+{
+  color: @blue-darker;
+}
+
+.sgml,
+.sgml .punctuation
+{
+  color: @red;
+}
+
+// .meta {} // ???
+
+.at-rule .keyword, // less/scss
+.doctype,
+.constant,
+.heading,
+.bold,
+.name,
+.magic,
+.class
+{
+  font-weight: bold;
+}
+
+.comment,
+.italic
+{
+  font-style: italic;
+}
+
+.terminator,
+.punctuation
+{
+  opacity: 0.667;
+}
+
+.punctuation {
+  color: inherit;
+  font-weight: normal;
+}

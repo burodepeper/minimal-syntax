@@ -1,0 +1,69 @@
+.css,
+.scss {
+  .attribute-name {
+    font-weight: normal;
+  }
+
+  &.class,
+  &.id {
+    color: @green;
+
+    .punctuation.definition.entity { // # in #id
+      color: inherit;
+    }
+  }
+
+  &.parent-selector {
+    .punctuation {
+      opacity: 1;
+    }
+  }
+
+  .function,
+  &.punctuation.definition.entity, // &
+  &.id {
+    font-weight: bold;
+  }
+
+  &.pseudo-element,
+  &.pseudo-class
+  {
+    font-style: italic;
+  }
+
+  &.function,
+  .mathematical-symbols,
+  .property-value {
+    color: @blue;
+  }
+
+  // &.function,
+  &.tag,
+  &.punctuation.definition.entity, // &
+  &.reference {
+    color: @blue-darker;
+  }
+
+  &.important {
+    color: @red;
+  }
+  // Maybe in the future...
+  // &.property-name {
+  //   &.vendor-prefix {
+  //     color: fade(@blue, 66%);
+  //     font-style: italic;
+  //   }
+  // }
+}
+
+
+
+.less {
+  // &.control,
+  // &.keyword,
+  .html // atom-text-editor
+  {
+    color: @blue-darker;
+    font-weight: bold;
+  }
+}
