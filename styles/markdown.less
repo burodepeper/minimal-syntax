@@ -9,7 +9,42 @@
     }
   }
 
+  &.quote {
+    color: @green;
+  }
+
   &.hr {
+    color: @grey;
+  }
+
+  &.list {
+    &.unordered {
+      color: @blue-darker;
+    }
+    &.ordered {
+      color: @blue-darker;
+    }
+    &.empty {
+      .punctuation {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.code {
+    color: @grey;
+    background: fade(@grey, 10%);
+    outline: 2px solid fade(@grey, 10%);
+  }
+
+    &.indented-code {
+      background: fade(@grey, 10%);
+    }
+
+  // &.escape,
+  // &.entity,
+  // &.character,
+  &.constant {
     color: @red;
   }
 
