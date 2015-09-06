@@ -84,7 +84,16 @@
     color: @blue-dark;
 
     .border {
-      color: @blue;
+      color: fade(@blue, 50%);
+
+      &.header {
+        color: fade(@blue-dark, 50%);
+      }
+
+      &.alignment {
+        color: @blue-dark;
+        font-weight: bold;
+      }
     }
   }
 
