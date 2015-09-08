@@ -7,16 +7,20 @@
 }
 
 .gutter {
-  background: @white;
+  background: transparent;
   color: fade(@black, 50%);
+
+  // .line-numbers {
+  //   .tile {}
+  // }
 
   .line-number {
     &.cursor-line {
-      color: fade(@black, 75%);
+      color: fade(@black, 50%);
     }
 
     &.cursor-line-no-selection {
-      color: fade(@black, 50%);
+      color: fade(@black, 100%);
     }
 
     &.git-line-added {
