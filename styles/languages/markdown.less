@@ -52,11 +52,17 @@
     opacity: 0.5;
   }
 
-  &.italic {
+  &.emphasis {
     font-style: italic;
+    background: fade(@green, 10%);
   }
 
-  &.bold {
+  &.strong {
     font-weight: bold;
+    background: fade(@red, 10%);
+
+    &.emphasis {
+      font-style: normal;
+    }
   }
 }
