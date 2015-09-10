@@ -51,7 +51,11 @@
   }
 
   .raw {
-    color: @green;
+    // color: @green;
+
+    color: @grey;
+    background: fade(@grey, 10%);
+    outline: 2px solid fade(@grey, 10%);
 
     .support.gfm {
       color: fade(@black, 50%);

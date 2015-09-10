@@ -1,9 +1,24 @@
+.comment {
+  color: @orange;
+}
+
 .text.plain,
+.text.md,
+.source.gfm,
 .comment {
   .type {
-    color: @orange;
     font-style: normal;
 
+    &.changed,
+    &.idea,
+    &.nb,
+    &.note {
+      color: inherit;
+    }
+
+    &.xxx,
+    &.hack,
+    &.review,
     &.todo,
     &.review,
     &.hack {
