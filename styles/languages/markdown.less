@@ -17,6 +17,23 @@
     color: @grey;
   }
 
+  &.link {
+    &.text {
+      color: @green;
+    }
+    &.destination {
+      color: @blue;
+
+      .uri {
+        text-decoration: underline;
+      }
+    }
+    &.title {
+      color: @blue-darker;
+      font-style: italic;
+    }
+  }
+
   &.list {
     &.unordered {
       color: @blue-darker;

@@ -1,0 +1,32 @@
+.dss {
+  font-weight: normal;
+
+  &.selector {
+    color: @black;
+  }
+
+  &.class.pseudo,
+  &.tag {
+    color: @blue-darker;
+  }
+
+  &.attribute-name
+  {
+    color: @green;
+  }
+
+  &.tag.wildcard {
+    color: @red;
+  }
+
+  &.tag,
+  &.attribute-name.id
+  {
+    font-weight: bold;
+  }
+
+  &.punctuation {
+    opacity: 0.5;
+  }
+
+}
