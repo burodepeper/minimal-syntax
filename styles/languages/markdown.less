@@ -17,6 +17,26 @@
     color: @grey;
   }
 
+  &.html {
+    color: @blue;
+
+    .tag {
+      font-weight: bold;
+    }
+
+    .attribute {
+      color: @blue-darker;
+
+      .name {
+        font-weight: normal;
+      }
+
+      .value {
+        color: @green;
+      }
+    }
+  }
+
   &.link {
     &.text {
       color: @green;
