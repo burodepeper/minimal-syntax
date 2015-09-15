@@ -5,28 +5,39 @@
     color: @black;
   }
 
-  &.attribute-name.pseudo,
-  &.tag {
+  &.selector.pseudo-class,
+  &.selector.pseudo-element,
+  {
+    color: @blue;
+  }
+
+  &.selector.attribute,
+  // &.attribute-name.pseudo-element,
+  &.selector.type,
+  {
     color: @blue-darker;
   }
 
-  &.attribute-name
+  &.value,
+  &.selector.id,
+  &.selector.class,
   {
     color: @green;
   }
 
-  &.tag.wildcard {
+  &.selector.universal {
     color: @red;
   }
 
-  &.tag,
-  &.attribute-name.id
+  &.selector.type,
+  &.selector.id
   {
     font-weight: bold;
   }
 
-  &.pseudo {
-    font-style: italic;
+  &.pseudo-class,
+  &.pseudo-element {
+    font-style: normal;
   }
 
   &.vendor-prefix,
