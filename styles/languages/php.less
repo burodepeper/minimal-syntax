@@ -9,6 +9,7 @@
   &.function.dir, // opendir(), readdir()
   &.function.info, // ini_get()
   &.function.array, // array_merge()
+  &.storage.type, // parent, (int)
   &.storage.type.class, // class
   &.storage.type.function, // function
   &.support.construct, // array(), isset(), empty()
@@ -19,7 +20,7 @@
 
   &.classobj,
   &.storage.modifier, // public, private, global
-  &.storage.type, // parent
+  // &.storage.type, // parent, (int)
   &.new, // new
   &.session, // session_start()
   &.import, // require(), include()
@@ -46,6 +47,7 @@
     color: @red;
   }
 
+  &.control,
   &.classobj,
   &.network,
   &.import
@@ -54,17 +56,23 @@
   }
 
   .operator {
-    &.assignment,
-    &.key {
-      color: @black;
+    &.arithmetic, // +, *
+    &.assignment, // =
+    &.comparison, // >
+    &.increment-decrement, // ++, --
+    &.key, // =>
+    &.class
+    {
+      // color: @black;
+      color:@blue-darker;
     }
 
     &.class { // ->, ::
-      color: fade(@black, 66%);
       font-weight: normal;
     }
 
-    &.logical {
+    &.logical // ||
+    {
       color: @red;
     }
   }
