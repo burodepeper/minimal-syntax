@@ -55,11 +55,20 @@
   }
 
   &.list {
-    &.unordered {
-      color: @blue-darker;
+    &.task {
+      &.completed {
+        color: @black;
+        opacity: 0.333;
+
+        .punctuation {
+          opacity: 1;
+        }
+      }
     }
-    &.ordered {
-      color: @blue-darker;
+    &.unordered,
+    &.ordered
+    {
+      color: @blue-dark;
     }
     &.empty {
       .punctuation {
