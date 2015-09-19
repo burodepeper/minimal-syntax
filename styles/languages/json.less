@@ -1,0 +1,23 @@
+.json {
+
+  &.string {
+    > .punctuation {
+      opacity: 0.5;
+    }
+  }
+
+  &.dictionary {
+    &:not(.value) {
+      > .string {
+        color: @blue;
+      }
+    }
+
+    &.value {
+      > .string {
+        color: @green;
+      }
+    }
+  }
+
+}
