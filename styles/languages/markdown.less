@@ -54,6 +54,10 @@
     }
   }
 
+  &.reference {
+    color: @aqua;
+  }
+
   &.list {
     &.task {
       &.completed {
@@ -126,6 +130,25 @@
 
     &.emphasis {
       font-style: normal;
+    }
+  }
+
+  &.critic {
+    &.addition {
+      color: @green;
+    }
+    &.deletion {
+      color: @red;
+    }
+    &.highlight {
+      background: fade(@yellow, 50%);
+    }
+    &.comment {
+      color: @orange;
+      font-style: normal;
+    }
+    &.substitution {
+      color: @blue;
     }
   }
 }
