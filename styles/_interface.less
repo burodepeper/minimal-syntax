@@ -82,27 +82,26 @@
 
     &.bracket-matcher {
       .region {
-        // background: fade(average(@black, @aqua), 20%);
         border: none;
         background: fade(@yellow, 50%);
-        outline: 2px solid @yellow;
+        display: inline-block;
       }
     }
 
     &.current-result,
     &.find-result {
       .region {
-        background: fade(@yellow, 25%);
+        background: fade(@yellow, 50%);
         border: none;
         border-radius: 0;
-        outline: 2px solid fade(@yellow, 50%);
+        // outline: 2px solid fade(@yellow, 50%);
       }
     }
 
     &.current-result {
       .region {
         background: fade(@yellow, 50%);
-        outline: 2px solid @yellow;
+        // outline: 2px solid @yellow;
       }
     }
   }
