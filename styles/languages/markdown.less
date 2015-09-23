@@ -122,15 +122,16 @@
   &.emphasis {
     font-style: italic;
     background: fade(@green, 10%);
+
+    &:not(.strong) .strong {
+      font-style: italic;
+    }
   }
 
   &.strong {
     font-weight: bold;
     background: fade(@red, 10%);
-
-    &.emphasis {
-      font-style: normal;
-    }
+    font-style: normal;
   }
 
   &.critic {
