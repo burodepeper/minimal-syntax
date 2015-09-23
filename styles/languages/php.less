@@ -55,6 +55,11 @@
     font-weight: bold;
   }
 
+  &.keyword.operator.string
+  {
+    opacity: 0.667;
+  }
+
   .operator {
     &.arithmetic, // +, *
     &.assignment, // =
@@ -71,9 +76,9 @@
       font-weight: normal;
     }
 
-    &.logical // ||
+    &.logical // ||, as
     {
-      color: @red;
+      color: @blue-darker;
     }
   }
 
