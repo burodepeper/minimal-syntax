@@ -99,13 +99,15 @@
 
   &.code {
     color: @grey;
-    background: fade(@grey, 10%);
-    // outline: 2px solid fade(@grey, 10%);
-  }
-
-    &.indented-code {
+    &:not(.fenced) {
       background: fade(@grey, 10%);
     }
+  }
+
+    // NOTE disabled
+    // &.indented-code {
+    //   background: fade(@grey, 10%);
+    // }
 
   // &.escape,
   // &.entity,
