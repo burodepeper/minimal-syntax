@@ -1,0 +1,41 @@
+.ass {
+  &.comment {
+    color: @orange;
+  }
+
+  &.constant {
+    color: @red;
+  }
+
+  &.value {
+    background: fade(@green, 10%);
+    color: @green;
+  }
+
+  &.input {
+    color: @green;
+
+    .punctuation {
+      background: transparent;
+      // opacity: 1;
+    }
+  }
+
+  &.id {
+    color: @aqua;
+  }
+
+  &.punctuation {
+    opacity: 0.5;
+  }
+
+  &.scope {
+    color: @blue;
+    font-weight: bold;
+
+    .domain {
+      font-weight: normal;
+      opacity: 0.667;
+    }
+  }
+}
