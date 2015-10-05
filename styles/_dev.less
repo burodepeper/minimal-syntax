@@ -1,0 +1,23 @@
+body.dev-mode {
+  atom-text-editor {
+    &::shadow {
+      .md {
+        &.emphasis {
+          background: fade(@green, 10%);
+        }
+        &.strong.emphasis {
+          background: fade(@red, 10%);
+        }
+
+        &.link {
+          &.auto {
+            background: fade(@blue, 10%);
+            .scheme {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
