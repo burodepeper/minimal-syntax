@@ -7,17 +7,12 @@
     color: @red;
   }
 
-  &.value {
+  &.token {
     background: fade(@green, 10%);
     color: @green;
-  }
 
-  &.input {
-    color: @green;
-
-    .punctuation {
-      background: transparent;
-      // opacity: 1;
+    &.punctuation {
+      opacity: 0.333;
     }
   }
 
@@ -32,10 +27,5 @@
   &.scope {
     color: @blue;
     font-weight: bold;
-
-    .domain {
-      font-weight: normal;
-      opacity: 0.667;
-    }
   }
 }
