@@ -96,3 +96,38 @@
   color: inherit;
   font-weight: normal;
 }
+
+.markup {
+  &.heading {
+    font-weight: bold;
+    color: @blue;
+  }
+  &.inserted,
+  &.addition,
+  &.quote {
+    color: @green;
+  }
+  &.deletion {
+    color: @red;
+  }
+  &.changed {
+    color: @blue;
+  }
+  &.list {
+    color: @blue-dark;
+    &.completed {
+      opacity: 0.333;
+    }
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &.raw {
+    background: fade(@black, 10%);
+    color: @grey;
+  }
+}
+
+.uri {
+  color: @blue;
+}
