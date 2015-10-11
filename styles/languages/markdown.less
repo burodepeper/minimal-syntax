@@ -88,7 +88,11 @@
     &.unordered,
     &.ordered
     {
-      color: @blue-dark;
+      color: @black;
+
+      > .punctuation {
+        color: @blue-dark;
+      }
     }
     &.empty {
       .punctuation {
@@ -124,6 +128,9 @@
   &.emphasis {
     font-style: italic;
     // background: fade(@green, 10%);
+    &:not(.strong) {
+      opacity: 0.667;
+    }
 
     &:not(.strong) .strong {
       font-style: italic;
@@ -143,18 +150,9 @@
       opacity: 1;
     }
 
-    // .border {
-    //   color: fade(@blue, 50%);
-    //
-    //   &.header {
-    //     color: fade(@blue-dark, 50%);
-    //   }
-    //
-    //   &.alignment {
-    //     color: @blue-dark;
-    //     font-weight: bold;
-    //   }
-    // }
+    > .punctuation {
+      color: @blue-darker;
+    }
   }
 
   &.critic {
