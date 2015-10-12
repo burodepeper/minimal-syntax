@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Move languages to separate files
+- [x] Move languages to separate files
 - [ ] Move these to Issues
 - [ ] Get the wrong version of the theme removed
 - [ ] `css`: Display prefixed attributes as punctuation

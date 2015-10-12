@@ -20,10 +20,9 @@
 atom-text-editor,
 :host {
 
-  -webkit-font-smoothing: subpixel-antialiased;
-
   background: @white;
   color: @black;
+  -webkit-font-smoothing: subpixel-antialiased;
 
   &::shadow {
     .wrap-guide {
@@ -79,13 +78,14 @@ atom-text-editor,
 
   // ---------- imports ----------
 
-  @import "styles/_interface.less";
-  @import "styles/_defaults.less";
-  @import "styles/_shared.less";
+  @import "styles/editor.less";
+  @import "styles/defaults.less";
+  @import "styles/shared.less";
 
   // ---------- languages ----------
 
   @import "styles/languages/apache.less";
+  @import "styles/languages/ass.less";
   @import "styles/languages/coffee.less";
   @import "styles/languages/css.less";
   @import "styles/languages/gfm.less";
@@ -97,9 +97,8 @@ atom-text-editor,
   @import "styles/languages/sql.less";
   @import "styles/languages/yaml.less";
 
-  @import "styles/languages/dss.less";
-  @import "styles/languages/ass.less";
-
 }
 
-@import "styles/_dev.less";
+// NOTE
+// These styles are only loaded when in dev-mode
+@import "styles/dev.less";
