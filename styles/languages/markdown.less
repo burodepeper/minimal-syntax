@@ -83,8 +83,15 @@
 
   &.code {
     color: @grey;
+
     &:not(.fenced) {
       background: fade(@grey, 10%);
+    }
+
+    &.fenced {
+      &.info {
+        color: @blue-darker;
+      }
     }
   }
 
