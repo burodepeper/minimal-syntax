@@ -9,32 +9,12 @@
     }
   }
 
+  &.hr {
+    color: fade(@blue-dark, 50%);
+  }
+
   &.quote {
     color: @green;
-  }
-
-  &.hr {
-    color: @grey;
-  }
-
-  &.html {
-    color: @blue;
-
-    .tag {
-      font-weight: bold;
-    }
-
-    .attribute {
-      color: @blue-darker;
-
-      .name {
-        font-weight: normal;
-      }
-
-      .value {
-        color: @green;
-      }
-    }
   }
 
   &.link {
@@ -108,14 +88,11 @@
     }
   }
 
-    // NOTE disabled
-    // &.indented-code {
-    //   background: fade(@grey, 10%);
-    // }
+  // NOTE disabled
+  // &.indented-code {
+  //   background: fade(@grey, 10%);
+  // }
 
-  // &.escape,
-  // &.entity,
-  // &.character,
   &.constant {
     color: @red;
   }
@@ -127,7 +104,7 @@
 
   &.emphasis {
     font-style: italic;
-    // background: fade(@green, 10%);
+
     &:not(.strong) {
       opacity: 0.667;
     }
@@ -140,7 +117,6 @@
   &.strong {
     font-weight: bold;
     font-style: normal;
-    // background: fade(@red, 10%);
   }
 
   &.table {
@@ -152,6 +128,7 @@
 
     > .punctuation {
       color: @blue-darker;
+      opacity: 0.333;
     }
   }
 
