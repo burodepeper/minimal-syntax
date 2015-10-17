@@ -1,89 +1,42 @@
-// ---------- variables ----------
-
+// Basic colors
 @white:         #ffffff;
 @black:         #000000;
-@grey:          #999999;
-@grey-light:    #f2f2f2;
 @blue:          #0000ff;
-@blue-darker:   #0000cc;
-@blue-dark:     #000099;
 @green:         #009900;
-@green-dark:    #007700;
 @aqua:          #0099cc;
 @red:           #ee1100;
-@orange:        #ff8000;
-@orange-darker: #cc6600;
 @yellow:        #ffdd00;
 
-// ---------- editor interface ----------
+// @grey:          #999999;
+// @grey-light:    #f2f2f2;
+// @blue-darker:   #0000cc;
+// @blue-dark:     #000099;
+// @green-dark:    #007700;
+// @orange:        #ff8000;
+// @orange-darker: #cc6600;
 
+// Derivatives
+@grey:          mix(@black, @white);
+@grey-light:    mix(@grey, @white, 25%);
+@blue-darker:   darken(@blue, 10%);
+@blue-dark:     darken(@blue-darker, 10%);
+@green-dark:    darken(@green, 10%);
+@orange:        mix(@red, @yellow);
+@orange-darker: darken(@orange, 10%);
+
+// Here we go!
 atom-text-editor,
 :host {
 
   background: @white;
   color: @black;
-  -webkit-font-smoothing: subpixel-antialiased;
 
-  &::shadow {
-    .wrap-guide {
-      background-color: fade(@black, 10%);
-    }
-
-    atom-text-editor-minimap {
-      overflow: visible; // hope this doesn't break anything; was originally hidden
-
-      &::shadow {
-        .minimap-visible-area {
-          background-color: fade(@grey, 25%);
-          opacity: 1;
-
-          &:after {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0;
-            width: 4px;
-            // background: fade(@grey, 50%);
-          }
-        }
-      }
-    }
-
-    // NOTE
-    // removes subpixel AA from tiles;
-    // results in richer colors, but is not meant to be as such
-    // .tile {
-    //   opacity: 0.999;
-    // }
-
-  }
-
-  &.is-focused {
-    background: @white;
-    color: @black;
-
-    &::shadow {
-      atom-text-editor-minimap {
-        &::shadow {
-          .minimap-visible-area {
-            background-color: fade(@aqua, 25%);
-
-            &:after {
-              background: @aqua;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // ---------- imports ----------
-
+  // Imports
   @import "styles/editor.less";
   @import "styles/defaults.less";
   @import "styles/shared.less";
 
-  // ---------- languages ----------
-
+  // Languages
   @import "styles/languages/apache.less";
   @import "styles/languages/ass.less";
   @import "styles/languages/coffee.less";

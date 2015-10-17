@@ -1,3 +1,56 @@
+&::shadow {
+  .wrap-guide {
+    background-color: fade(@black, 10%);
+  }
+
+  atom-text-editor-minimap {
+    overflow: visible; // hope this doesn't break anything; was originally hidden
+
+    &::shadow {
+      .minimap-visible-area {
+        background-color: fade(@grey, 25%);
+        opacity: 1;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0;
+          width: 4px;
+          // background: fade(@grey, 50%);
+        }
+      }
+    }
+  }
+
+  // NOTE
+  // removes subpixel AA from tiles;
+  // results in richer colors, but is not meant to be as such
+  // .tile {
+  //   opacity: 0.999;
+  // }
+
+}
+
+&.is-focused {
+  background: @white;
+  color: @black;
+
+  &::shadow {
+    atom-text-editor-minimap {
+      &::shadow {
+        .minimap-visible-area {
+          background-color: fade(@aqua, 25%);
+
+          &:after {
+            background: @aqua;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .indent-guide {
   color: fade(@black, 10%);
 }
