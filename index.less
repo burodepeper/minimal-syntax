@@ -1,19 +1,28 @@
-// ---------- variables ----------
+// Default colors
+// @green:         #009900;
+// @red:           #ee1100;
+// @blue:          #0000ff;
+// @yellow:        #ffdd00;
+// @aqua:          #0099cc;
 
+// Natural Color System
+// See: https://en.wikipedia.org/wiki/Natural_Color_System
 @white:         #ffffff;
 @black:         #000000;
-@grey:          #999999;
-@grey-light:    #f2f2f2;
-@blue:          #0000ff;
-@blue-darker:   #0000cc;
-@blue-dark:     #000099;
-@green:         #009900;
-@green-dark:    #007700;
-@aqua:          #0099cc;
-@red:           #ee1100;
-@orange:        #ff8000;
-@orange-darker: #cc6600;
-@yellow:        #ffdd00;
+@green:         #009f6b;
+@red:           #c40233;
+@blue:          #0087bd;
+@yellow:        #ffd300;
+
+// Derivatives
+@grey:          mix(@black, @white);
+@grey-light:    mix(@grey, @white, 20%);
+@blue-darker:   darken(@blue, 16%);
+@blue-dark:     darken(@blue, 33%);
+@green-dark:    darken(@green, 10%);
+@aqua:          lighten(saturate(mix(@blue, @green), 25%), 5%);
+@orange:        saturate(mix(@red, @yellow, 50%), 25%);
+@orange-darker: darken(@orange, 10%);
 
 // ---------- editor interface ----------
 
