@@ -10,6 +10,8 @@ Different shades and subtle color variants are used to create a visual hierarchy
 
 This theme is still a _work in progress_ though **actively maintained**. Suggestions are always welcome and highly appreciated.
 
+Also available: [minimal-syntax-dark](https://atom.io/packages/minimal-syntax-dark)
+
 ### From personal experience
 
 I've created this theme for myself and from personal experience. It is/will be optimised for the languages I regularly use: `html`, `php`, `coffeescript`, `javascript`, `scss`, `css`, `less`, `mysql`, `apache` and `markdown`.
