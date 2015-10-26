@@ -1,11 +1,20 @@
-// Basic colors
-@white:         #ffffff;
-@black:         #000000;
-@blue:          #0000ff;
-@green:         #009900;
-@aqua:          #0099cc;
-@red:           #ee1100;
-@yellow:        #ffdd00;
+// Basic colors (light)
+// @white:         #ffffff;
+// @black:         #000000;
+// @blue:          #0000ff;
+// @green:         #009900;
+// @aqua:          #0099cc;
+// @red:           #ee1100;
+// @yellow:        #ffdd00;
+
+// Basic colors (dark)
+@white:         #111111;
+@black:         #e5e5e5;
+@blue:          #ffdd00;
+@green:         #ff00cc;
+@red:           #0099ff;
+@yellow:        #00cc99;
+@aqua:          #ff6600;
 
 // @grey:          #999999;
 // @grey-light:    #f2f2f2;
@@ -15,14 +24,28 @@
 // @orange:        #ff8000;
 // @orange-darker: #cc6600;
 
-// Derivatives
+// Derivatives (light)
+// @grey:          mix(@black, @white);
+// @grey-light:    mix(@grey, @white, 25%);
+// @blue-darker:   darken(@blue, 10%);
+// @blue-dark:     darken(@blue-darker, 10%);
+// @green-dark:    darken(@green, 10%);
+// @orange:        mix(@red, @yellow);
+// @orange-darker: darken(@orange, 10%);
+
+// Derivatives (dark)
 @grey:          mix(@black, @white);
 @grey-light:    mix(@grey, @white, 25%);
-@blue-darker:   darken(@blue, 10%);
-@blue-dark:     darken(@blue-darker, 10%);
-@green-dark:    darken(@green, 10%);
+@blue-darker:   lighten(@blue, 10%);
+@blue-dark:     lighten(@blue-darker, 10%);
+@green-dark:    lighten(@green, 10%);
 @orange:        mix(@red, @yellow);
-@orange-darker: darken(@orange, 10%);
+@orange-darker: lighten(@orange, 10%);
+
+// NOTE
+// What used to $red should now be pink (so, $green)
+// The new $orange is a nice color for old $green
+// The new $red would be a nice $orange, perhaps a little darker
 
 // Here we go!
 atom-text-editor,
