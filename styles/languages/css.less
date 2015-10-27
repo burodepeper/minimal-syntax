@@ -6,7 +6,7 @@
 
   &.class,
   &.id {
-    color: @green;
+    color: @syntax-content;
 
     .punctuation.definition.entity { // # in #id
       color: inherit;
@@ -34,23 +34,23 @@
   &.function,
   .mathematical-symbols,
   .property-value {
-    color: @blue;
+    color: @syntax-code;
   }
 
   // &.function,
   &.tag,
   &.punctuation.definition.entity, // &
   &.reference {
-    color: @blue-darker;
+    color: @syntax-code-darker;
   }
 
   &.important {
-    color: @red;
+    color: @syntax-constant;
   }
   // Maybe in the future...
   // &.property-name {
   //   &.vendor-prefix {
-  //     color: fade(@blue, 66%);
+  //     color: fade(@syntax-code, 66%);
   //     font-style: italic;
   //   }
   // }
@@ -63,7 +63,7 @@
   // &.keyword,
   .html // atom-text-editor
   {
-    color: @blue-darker;
+    color: @syntax-code-darker;
     font-weight: bold;
   }
 }

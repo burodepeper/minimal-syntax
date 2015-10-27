@@ -3,15 +3,15 @@ body.dev-mode {
     &::shadow {
       .md {
         &.emphasis {
-          background: fade(@green, 10%);
+          background: fade(@syntax-content, 10%);
         }
         &.strong.emphasis {
-          background: fade(@red, 10%);
+          background: fade(@syntax-constant, 10%);
         }
 
         &.link {
           &.auto {
-            background: fade(@blue, 10%);
+            background: fade(@syntax-code, 10%);
             .scheme {
               opacity: 0.5;
             }

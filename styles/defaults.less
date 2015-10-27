@@ -1,133 +1,139 @@
-.comment
-{
-  color: @orange;
-}
+.text.html,
+.source {
 
-.operator {
-  color: @black;
+  color: @syntax-fg;
 
-  &.logical {
-    color: @black;
-    font-weight: bold;
+  .comment
+  {
+    color: @syntax-comment;
   }
-}
 
-.support,
-.storage,
-.modifier,
-.tag,
-.keyword,
-.function-call,
-.function,
-.object,
-.control
-{
-  color: @blue;
-}
+  .operator {
+    color: @syntax-fg;
 
-.constant,
-.unit,
-.numeric
-{
-  color: @red;
-}
-
-.attribute, // css
-.variable
-{
-  color: @aqua;
-}
-
-.url,
-.string
-{
-  color: @green;
-}
-
-.at-rule, // less/scss
-.pseudo-class,
-.pseudo-element,
-.sgml,
-.support.class, // coffee: Math
-.terminator
-{
-  color: @blue-darker;
-}
-
-.sgml,
-.sgml .punctuation
-{
-  color: @red;
-}
-
-.invalid
-{
-  background: @red;
-  color: @white;
-}
-
-// .meta {} // ???
-
-.at-rule .keyword, // less/scss
-.doctype,
-.constant,
-.heading,
-.bold,
-.name,
-.magic,
-.class
-{
-  font-weight: bold;
-}
-
-.comment,
-.italic
-{
-  font-style: italic;
-}
-
-.terminator,
-.punctuation
-{
-  opacity: 0.667;
-}
-
-.punctuation {
-  color: inherit;
-  font-weight: normal;
-}
-
-.markup {
-  &.heading {
-    font-weight: bold;
-    color: @blue;
-  }
-  &.inserted,
-  &.addition,
-  &.quote {
-    color: @green;
-  }
-  &.deletion {
-    color: @red;
-  }
-  &.changed {
-    color: @blue;
-  }
-  &.list {
-    color: @blue-dark;
-    &.completed {
-      opacity: 0.333;
+    &.logical {
+      font-weight: bold;
     }
   }
-  &.underline {
-    text-decoration: underline;
-  }
-  &.raw {
-    background: fade(@black, 10%);
-    color: @grey;
-  }
-}
 
-.uri {
-  color: @blue;
+  .support,
+  .storage,
+  .modifier,
+  .tag,
+  .keyword,
+  .function-call,
+  .function,
+  .object,
+  .control
+  {
+    color: @syntax-code;
+  }
+
+  .constant,
+  .unit,
+  .numeric
+  {
+    color: @syntax-constant;
+  }
+
+  .attribute, // css
+  .variable
+  {
+    color: @syntax-accent;
+  }
+
+  .url,
+  .string
+  {
+    color: @syntax-content;
+  }
+
+  .at-rule, // less/scss
+  .pseudo-class,
+  .pseudo-element,
+  .sgml,
+  .support.class, // coffee: Math
+  .terminator
+  {
+    color: @syntax-code-darker;
+  }
+
+  .sgml,
+  .sgml .punctuation
+  {
+    color: @syntax-constant;
+  }
+
+  .invalid
+  {
+    background: @syntax-constant;
+    color: @syntax-bg;
+  }
+
+  // .meta {} // ???
+
+  .at-rule .keyword, // less/scss
+  .doctype,
+  .constant,
+  .heading,
+  .bold,
+  .name,
+  .magic,
+  .class
+  {
+    font-weight: bold;
+  }
+
+  .comment,
+  .italic
+  {
+    font-style: italic;
+  }
+
+  .terminator,
+  .punctuation
+  {
+    opacity: 0.667;
+  }
+
+  .punctuation {
+    color: inherit;
+    font-weight: normal;
+  }
+
+  .markup {
+    &.heading {
+      font-weight: bold;
+      color: @syntax-code;
+    }
+    &.inserted,
+    &.addition,
+    &.quote {
+      color: @syntax-content;
+    }
+    &.deletion {
+      color: @syntax-constant;
+    }
+    &.changed {
+      color: @syntax-code;
+    }
+    &.list {
+      color: @syntax-code-dark;
+      &.completed {
+        opacity: 0.333;
+      }
+    }
+    &.underline {
+      text-decoration: underline;
+    }
+    &.raw {
+      background: fade(@syntax-fg, 10%);
+      color: @syntax-neutral;
+    }
+  }
+
+  .uri {
+    color: @syntax-code;
+  }
+
 }

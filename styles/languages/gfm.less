@@ -8,7 +8,7 @@
       content:'↵';
       font-size: 150%;
       line-height: 1;
-      color: fade(@black, 25%);
+      color: fade(@syntax-fg, 25%);
     }
   }
 
@@ -31,11 +31,11 @@
   }
 
   .hr {
-    color: fade(@black, 50%);
+    color: fade(@syntax-fg, 50%);
   }
 
   .heading {
-    color: @blue;
+    color: @syntax-code;
 
     .marker {
       font-weight: normal;
@@ -45,16 +45,16 @@
   }
 
   .raw {
-    color: @grey;
-    background: fade(@grey, 10%);
+    color: @syntax-neutral;
+    background: fade(@syntax-neutral, 10%);
 
     .support.gfm {
-      color: fade(@black, 50%);
+      color: fade(@syntax-fg, 50%);
     }
   }
 
   .strike {
-    color: fade(@black, 33%);
+    color: fade(@syntax-fg, 33%);
     text-decoration: line-through;
   }
 
@@ -62,31 +62,31 @@
     display: block;
 
     .support.gfm {
-      color: fade(@black, 50%);
+      color: fade(@syntax-fg, 50%);
     }
   }
 
   .link {
-    color: @green;
+    color: @syntax-content;
 
     .link {
       text-decoration: underline;
-      color: @blue;
+      color: @syntax-code;
     }
   }
 
   .table {
-    color: @blue-dark;
+    color: @syntax-code-dark;
 
     .border {
-      color: fade(@blue, 50%);
+      color: fade(@syntax-code, 50%);
 
       &.header {
-        color: fade(@blue-dark, 50%);
+        color: fade(@syntax-code-dark, 50%);
       }
 
       &.alignment {
-        color: @blue-dark;
+        color: @syntax-code-dark;
         font-weight: bold;
       }
     }
@@ -94,16 +94,16 @@
 
   .username,
   .issue {
-    color: @aqua;
+    color: @syntax-accent;
   }
 
   .mention,
   .issue.tag {
-    color: fade(@aqua, 50%);
+    color: fade(@syntax-accent, 50%);
   }
 
   &.quote {
-    color: @green;
+    color: @syntax-content;
 
     .gfm.support {
       opacity: 0.667;
@@ -118,20 +118,20 @@
       font-weight: bold;
     }
     &.addition {
-      color: @green;
+      color: @syntax-content;
     }
     &.deletion {
-      color: @red;
+      color: @syntax-constant;
       text-decoration: line-through;
     }
     &.highlight {
-      background: @yellow;
+      background: @syntax-highlight;
     }
     &.comment {
-      color: @orange;
+      color: @syntax-comment;
     }
     &.substitution {
-      color: @blue;
+      color: @syntax-code;
     }
   }
 }

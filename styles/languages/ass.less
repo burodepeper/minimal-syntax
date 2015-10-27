@@ -8,7 +8,7 @@
   }
 
   &.token {
-    background: fade(@green, 10%);
+    background: fade(@syntax-content, 10%);
 
     &.punctuation {
       opacity: 0.333;
@@ -17,13 +17,13 @@
 
   &.output {
     .token {
-      background: fade(@blue-darker, 5%);
-      color: fade(@blue-darker, 67%);
+      background: fade(@syntax-code-darker, 5%);
+      color: fade(@syntax-code-darker, 67%);
     }
 
     .scope {
       font-weight: normal;
-      color: @blue-darker;
+      color: @syntax-code-darker;
     }
   }
 }

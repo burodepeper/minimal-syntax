@@ -1,57 +1,23 @@
-// Basic colors
-@white:         #ffffff;
-@black:         #000000;
-@blue:          #0000ff;
-@green:         #009900;
-@aqua:          #0099cc;
-@red:           #ee1100;
-@yellow:        #ffdd00;
+// Imports
+@import (reference) "styles/syntax-variables";
+@import "styles/editor";
+@import "styles/defaults";
+@import "styles/shared";
 
-// @grey:          #999999;
-// @grey-light:    #f2f2f2;
-// @blue-darker:   #0000cc;
-// @blue-dark:     #000099;
-// @green-dark:    #007700;
-// @orange:        #ff8000;
-// @orange-darker: #cc6600;
-
-// Derivatives
-@grey:          mix(@black, @white);
-@grey-light:    mix(@grey, @white, 25%);
-@blue-darker:   darken(@blue, 10%);
-@blue-dark:     darken(@blue-darker, 10%);
-@green-dark:    darken(@green, 10%);
-@orange:        mix(@red, @yellow);
-@orange-darker: darken(@orange, 10%);
-
-// Here we go!
-atom-text-editor,
-:host {
-
-  background: @white;
-  color: @black;
-
-  // Imports
-  @import "styles/editor.less";
-  @import "styles/defaults.less";
-  @import "styles/shared.less";
-
-  // Languages
-  @import "styles/languages/apache.less";
-  @import "styles/languages/ass.less";
-  @import "styles/languages/coffee.less";
-  @import "styles/languages/css.less";
-  @import "styles/languages/gfm.less";
-  @import "styles/languages/html.less";
-  @import "styles/languages/javascript.less";
-  @import "styles/languages/json.less";
-  @import "styles/languages/markdown.less";
-  @import "styles/languages/php.less";
-  @import "styles/languages/python.less";
-  @import "styles/languages/sql.less";
-  @import "styles/languages/yaml.less";
-
-}
+// Languages
+@import "styles/languages/apache";
+@import "styles/languages/ass";
+@import "styles/languages/coffee";
+@import "styles/languages/css";
+@import "styles/languages/gfm";
+@import "styles/languages/html";
+@import "styles/languages/javascript";
+@import "styles/languages/json";
+@import "styles/languages/markdown";
+@import "styles/languages/php";
+@import "styles/languages/python";
+@import "styles/languages/sql";
+@import "styles/languages/yaml";
 
 // NOTE
 // These styles are only loaded when in dev-mode

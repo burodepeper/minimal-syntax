@@ -1,0 +1,17 @@
+// Basic colors (light)
+@syntax-bg:             #ffffff;
+@syntax-fg:             #000000;
+@syntax-code:           #0000ff;
+@syntax-content:        #009900;
+@syntax-accent:         #0099cc;
+@syntax-constant:       #ee1100;
+@syntax-highlight:      #ffdd00;
+@syntax-comment:        mix(@syntax-constant, @syntax-highlight);
+
+// Derivatives (light)
+@syntax-neutral:        mix(@syntax-fg, @syntax-bg);
+@syntax-neutral-light:  mix(@syntax-neutral, @syntax-bg, 25%);
+@syntax-code-darker:    darken(@syntax-code, 10%);
+@syntax-code-dark:      darken(@syntax-code-darker, 10%);
+@syntax-content-dark:   darken(@syntax-content, 10%);
+@syntax-comment-darker: darken(@syntax-comment, 10%);

@@ -1,6 +1,6 @@
 .md {
   &.heading {
-    color: @blue;
+    color: @syntax-code;
 
     &.empty {
       .punctuation {
@@ -10,43 +10,43 @@
   }
 
   &.hr {
-    color: fade(@blue-dark, 50%);
+    color: fade(@syntax-code-dark, 50%);
   }
 
   &.quote {
-    color: @green;
+    color: @syntax-content;
   }
 
   &.link {
     &.text {
-      color: @green;
+      color: @syntax-content;
     }
     &.destination {
-      color: @blue;
+      color: @syntax-code;
 
       .uri {
         text-decoration: underline;
       }
     }
     &.title {
-      color: @blue-darker;
+      color: @syntax-code-darker;
       font-style: italic;
     }
   }
 
   &.reference {
-    color: @aqua;
+    color: @syntax-accent;
   }
 
   &.list {
     &.task {
       &.completed {
-        color: @black;
+        color: @syntax-fg;
         opacity: 0.333;
 
         .code {
           background: transparent;
-          color: @black;
+          color: @syntax-fg;
         }
 
         .punctuation {
@@ -68,10 +68,10 @@
     &.unordered,
     &.ordered
     {
-      color: @black;
+      color: @syntax-fg;
 
       > .punctuation {
-        color: @blue-dark;
+        color: @syntax-code-dark;
       }
     }
     &.empty {
@@ -82,26 +82,26 @@
   }
 
   &.code {
-    color: @grey;
+    color: @syntax-neutral;
 
     &:not(.fenced) {
-      background: fade(@grey, 10%);
+      background: fade(@syntax-neutral, 10%);
     }
 
     &.fenced {
       &.info {
-        color: @blue-darker;
+        color: @syntax-code-darker;
       }
     }
   }
 
   // NOTE disabled
   // &.indented-code {
-  //   background: fade(@grey, 10%);
+  //   background: fade(@syntax-neutral, 10%);
   // }
 
   &.constant {
-    color: @red;
+    color: @syntax-constant;
   }
 
   &.punctuation {
@@ -127,14 +127,14 @@
   }
 
   &.table {
-    color: @blue-dark;
+    color: @syntax-code-dark;
 
     .alignment {
       opacity: 1;
     }
 
     > .punctuation {
-      color: @blue-darker;
+      color: @syntax-code-darker;
       opacity: 0.333;
     }
   }
@@ -146,20 +146,20 @@
 
   &.critic {
     &.addition {
-      color: @green;
+      color: @syntax-content;
     }
     &.deletion {
-      color: @red;
+      color: @syntax-constant;
     }
     &.highlight {
-      background: fade(@yellow, 50%);
+      background: fade(@syntax-highlight, 50%);
     }
     &.comment {
-      color: @orange;
+      color: @syntax-comment;
       font-style: normal;
     }
     &.substitution {
-      color: @blue;
+      color: @syntax-code;
     }
   }
 }

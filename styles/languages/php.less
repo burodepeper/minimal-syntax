@@ -15,7 +15,7 @@
   &.support.construct, // array(), isset(), empty()
   &.class.variable // Validate::$type ($type)
   {
-    color: @blue;
+    color: @syntax-code;
   }
 
   &.classobj,
@@ -28,22 +28,22 @@
   &.control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   &.construct // echo
   {
-    color: @blue-darker;
+    color: @syntax-code-darker;
   }
 
   &.inherited-class,
   &.class.name
   {
-    color: @blue-dark;
+    color: @syntax-code-dark;
   }
 
   &.string,
   &.string-contents {
-    color: @green;
+    color: @syntax-content;
   }
 
   &.constant {
-    color: @red;
+    color: @syntax-constant;
   }
 
   &.control,
@@ -68,7 +68,7 @@
     &.class,
     &.string,
     {
-      color:@blue-darker;
+      color:@syntax-code-darker;
     }
 
     &.class { // ->, ::
@@ -77,13 +77,13 @@
 
     &.logical // ||, as
     {
-      color: @blue-darker;
+      color: @syntax-code-darker;
     }
   }
 
   &.arguments {
     &:not(.argument) {
-      color: fade(@black, 66%);
+      color: fade(@syntax-fg, 66%);
     }
   }
 }
