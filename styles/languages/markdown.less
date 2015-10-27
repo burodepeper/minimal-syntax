@@ -1,165 +1,171 @@
-.md {
-  &.heading {
-    color: @syntax-code;
-
-    &.empty {
-      .punctuation {
-        opacity: 1;
-      }
-    }
-  }
-
-  &.hr {
-    color: fade(@syntax-code-dark, 50%);
-  }
-
-  &.quote {
-    color: @syntax-content;
-  }
-
-  &.link {
-    &.text {
-      color: @syntax-content;
-    }
-    &.destination {
+.text.md {
+  .md {
+    &.heading {
       color: @syntax-code;
 
-      .uri {
-        text-decoration: underline;
-      }
-    }
-    &.title {
-      color: @syntax-code-darker;
-      font-style: italic;
-    }
-  }
-
-  &.reference {
-    color: @syntax-accent;
-  }
-
-  &.list {
-    &.task {
-      &.completed {
-        color: @syntax-fg;
-        opacity: 0.333;
-
-        .code {
-          background: transparent;
-          color: @syntax-fg;
-        }
-
+      &.empty {
         .punctuation {
           opacity: 1;
         }
-
-        .todo,
-        .review {
-          color: inherit;
-        }
-
-        .fixme {
-          background: transparent;
-          outline: none;
-          color: inherit;
-        }
       }
     }
-    &.unordered,
-    &.ordered
-    {
-      color: @syntax-fg;
 
-      > .punctuation {
-        color: @syntax-code-dark;
-      }
-    }
-    &.empty {
-      .punctuation {
-        opacity: 1;
-      }
-    }
-  }
-
-  &.code {
-    color: @syntax-neutral;
-
-    &:not(.fenced) {
-      background: fade(@syntax-neutral, 10%);
+    &.hr {
+      color: fade(@syntax-code-dark, 50%);
     }
 
-    &.fenced {
-      &.info {
-        color: @syntax-code-darker;
-      }
-    }
-  }
-
-  // NOTE disabled
-  // &.indented-code {
-  //   background: fade(@syntax-neutral, 10%);
-  // }
-
-  &.constant {
-    color: @syntax-constant;
-  }
-
-  &.punctuation {
-    opacity: 0.5;
-    background: inherit;
-  }
-
-  &.emphasis {
-    font-style: italic;
-
-    &:not(.strong) {
-      opacity: 0.667;
-    }
-
-    &:not(.strong) .strong {
-      font-style: italic;
-    }
-  }
-
-  &.strong {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  &.table {
-    color: @syntax-code-dark;
-
-    .alignment {
-      opacity: 1;
-    }
-
-    > .punctuation {
-      color: @syntax-code-darker;
-      opacity: 0.333;
-    }
-  }
-
-  &.strike {
-    text-decoration: line-through;
-    opacity: 0.5;
-  }
-
-  &.critic {
-    &.addition {
+    &.quote {
       color: @syntax-content;
     }
-    &.deletion {
+
+    &.link {
+      &.text {
+        color: @syntax-content;
+      }
+      &.destination {
+        color: @syntax-code;
+
+        .uri {
+          text-decoration: underline;
+        }
+      }
+      &.title {
+        color: @syntax-code-darker;
+        font-style: italic;
+      }
+    }
+
+    &.reference {
+      color: @syntax-accent;
+    }
+
+    &.list {
+      &.task {
+        &.completed {
+          color: @syntax-fg;
+          opacity: 0.333;
+
+          .code {
+            background: transparent;
+            color: @syntax-fg;
+          }
+
+          .punctuation {
+            opacity: 1;
+          }
+
+          .todo,
+          .review {
+            color: inherit;
+          }
+
+          .fixme {
+            background: transparent;
+            outline: none;
+            color: inherit;
+          }
+        }
+      }
+      &.unordered,
+      &.ordered
+      {
+        color: @syntax-fg;
+
+        > .punctuation {
+          color: @syntax-code-dark;
+        }
+      }
+      &.empty {
+        .punctuation {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.code {
+      color: @syntax-neutral;
+
+      &:not(.fenced) {
+        background: fade(@syntax-neutral, 10%);
+      }
+
+      &.fenced {
+        &.info {
+          color: @syntax-code-darker;
+        }
+      }
+    }
+
+    // NOTE disabled
+    // &.indented-code {
+    //   background: fade(@syntax-neutral, 10%);
+    // }
+
+    &.constant {
       color: @syntax-constant;
+      &.language {
+        color: @syntax-neutral;
+        font-weight: normal;
+      }
     }
-    &.highlight {
-      background: fade(@syntax-highlight, 50%);
+
+    &.punctuation {
+      opacity: 0.5;
+      background: inherit;
     }
-    &.comment {
-      color: @syntax-comment;
+
+    &.emphasis {
+      font-style: italic;
+
+      &:not(.strong) {
+        opacity: 0.667;
+      }
+
+      &:not(.strong) .strong {
+        font-style: italic;
+      }
+    }
+
+    &.strong {
+      font-weight: bold;
       font-style: normal;
     }
-    &.substitution {
-      color: @syntax-code;
+
+    &.table {
+      color: @syntax-code-dark;
+
+      .alignment {
+        opacity: 1;
+      }
+
+      > .punctuation {
+        color: @syntax-code-darker;
+        opacity: 0.333;
+      }
+    }
+
+    &.strike {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    &.critic {
+      &.addition {
+        color: @syntax-content;
+      }
+      &.deletion {
+        color: @syntax-constant;
+      }
+      &.highlight {
+        background: fade(@syntax-highlight, 50%);
+      }
+      &.comment {
+        color: @syntax-comment;
+        font-style: normal;
+      }
+      &.substitution {
+        color: @syntax-code;
+      }
     }
   }
 }
