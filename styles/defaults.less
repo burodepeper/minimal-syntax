@@ -37,7 +37,6 @@
     color: @syntax-constant;
   }
 
-  .attribute, // css
   .variable
   {
     color: @syntax-accent;
@@ -49,6 +48,7 @@
     color: @syntax-content;
   }
 
+  .attribute,
   .at-rule, // less/scss
   .pseudo-class,
   .pseudo-element,
@@ -128,7 +128,7 @@
       text-decoration: underline;
     }
     &.raw {
-      background: fade(@syntax-fg, 10%);
+      // background: fade(@syntax-fg, 10%);
       color: @syntax-neutral;
     }
   }

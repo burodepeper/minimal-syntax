@@ -134,13 +134,14 @@
     &.table {
       color: @syntax-code-dark;
 
-      .alignment {
-        opacity: 1;
-      }
-
       > .punctuation {
         color: @syntax-code-darker;
-        opacity: 0.333;
+        opacity: 0.5;
+
+        &.alignment {
+          color: @syntax-code;
+          opacity: 1;
+        }
       }
     }
 
@@ -165,6 +166,28 @@
       }
       &.substitution {
         color: @syntax-code;
+      }
+    }
+
+    &.special-attributes {
+      color: @syntax-neutral;
+
+      .other {
+        color: inherit;
+      }
+
+      .id,
+      .class
+      {
+        color: @syntax-constant;
+      }
+
+      .id {
+        font-weight: bold;
+      }
+
+      .class {
+        font-weight: normal;
       }
     }
   }
