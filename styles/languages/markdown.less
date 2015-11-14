@@ -171,22 +171,24 @@
 
     &.special-attributes {
       color: @syntax-neutral;
+    }
 
-      .other {
+    &.special.attribute {
+      &.other {
         color: inherit;
       }
 
-      .id,
-      .class
+      &.id,
+      &.class
       {
         color: @syntax-constant;
       }
 
-      .id {
+      &.id {
         font-weight: bold;
       }
 
-      .class {
+      &.class {
         font-weight: normal;
       }
     }
