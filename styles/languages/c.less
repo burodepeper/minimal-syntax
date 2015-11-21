@@ -1,21 +1,22 @@
 .c {
+  &.meta {
+    color: @syntax-fg;
+
+    &.parens {
+      color: @syntax-accent;
+    }
+  }
+
   &.preprocessor,
   &.include,
   &.function,
+  &.initialization .variable,
   {
     color: @syntax-code;
   }
 
   &.string {
     color: @syntax-content;
-  }
-
-  &.meta {
-    color: @syntax-fg;
-    
-    &.parens {
-      color: @syntax-accent;
-    }
   }
 
   &.storage {
@@ -35,12 +36,16 @@
   }
 
   &.keyword {
+    // font-weight: bold;
+  }
+
+  &.control {
     font-weight: bold;
   }
 
-  &.control {}
-
-  &.import {}
+  &.import {
+    font-weight: normal;
+  }
 
 
 
