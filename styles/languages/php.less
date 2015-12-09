@@ -13,7 +13,7 @@
   &.storage.type.class, // class
   &.storage.type.function, // function
   &.support.construct, // array(), isset(), empty()
-  &.property.variable, // $var->property->function
+  // &.property.variable, // $var->property->function
   &.class.variable // Validate::$type ($type)
   {
     color: @syntax-code;
@@ -85,6 +85,18 @@
   &.arguments {
     &:not(.argument) {
       color: fade(@syntax-fg, 66%);
+    }
+  }
+
+  &.embedded {
+    &.begin,
+    &.end,
+    &.line {
+      color: @syntax-neutral;
+
+      .source.php {
+        color: inherit;
+      }
     }
   }
 }
