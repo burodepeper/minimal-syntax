@@ -16,6 +16,17 @@
 
     &.quote {
       color: @syntax-content;
+
+      .link.markup,
+      .link.text,
+      .link.image
+      .string {
+        color: @syntax-content-dark;
+      }
+
+      .uri {
+        color: @syntax-code-darker;
+      }
     }
 
     &.link {
@@ -123,7 +134,7 @@
       font-style: italic;
 
       &:not(.strong) {
-        opacity: 0.667;
+        opacity: 0.75;
       }
 
       &:not(.strong) .strong {
@@ -163,9 +174,9 @@
       &.deletion {
         color: @syntax-constant;
       }
-      &.highlight {
-        background: fade(@syntax-highlight, 50%);
-      }
+      // &.highlight {
+      //   background: fade(@syntax-highlight, 25%);
+      // }
       &.comment {
         color: @syntax-comment;
         font-style: normal;
