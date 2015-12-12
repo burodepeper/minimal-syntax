@@ -10,23 +10,19 @@
     &.changed,
     &.idea,
     &.nb,
-    &.note {
-      color: inherit;
-      // text-decoration: underline;
-      border-bottom: 1px solid;
-    }
-
+    &.note,
     &.xxx,
     &.hack,
     &.review,
     &.todo,
     &.review,
     &.hack {
-      color: @syntax-constant;
+      color: @syntax-comment;
+      font-weight: bold;
     }
 
     &.fixme {
-      outline: 2px solid @syntax-constant;
+      // outline: 2px solid @syntax-constant;
       background: @syntax-constant;
       color: @syntax-bg;
     }
