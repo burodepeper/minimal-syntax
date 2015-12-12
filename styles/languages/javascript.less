@@ -1,11 +1,13 @@
 .js {
   .variable {
-    color: @syntax-accent; // this
+    &.language {
+      color: @syntax-code; // this
+    }
   }
 
   &.constant {
     &:not(.numeric) {
-      color: @syntax-code-dark;
+      color: @syntax-code-alt;
     }
 
     &.support, // x, y, prototype :(
@@ -16,7 +18,7 @@
   }
 
   &.instance {
-    color: @syntax-code-darker;
+    color: @syntax-code-alt;
   }
 
   &.constant.boolean {
@@ -25,7 +27,49 @@
 
   &.embedded {
     .html.tag {
-      color: @syntax-code-dark;
+      color: @syntax-code-alt;
     }
+  }
+
+  &.support.class, // event, window
+  {
+    font-weight: normal;
+    color: @syntax-code;
+  }
+
+  &.keyword {
+    &.operator { // :, =, +, -
+      // color: @syntax-fg;
+      color: @syntax-code-alt;
+
+      &.new { // new
+        color: @syntax-code;
+        font-weight: normal;
+      }
+
+      &.comparison, // ==
+      &.increment, // ++
+      &.decrement, // --
+      &.logical { // &&
+        color: @syntax-code;
+      }
+    }
+
+    &.control { // from, if, return
+
+    }
+  }
+
+  &.meta {
+    &.comma {
+      color: @syntax-fg;
+    }
+    &.prototype .support.constant { // prototype
+      color: @syntax-code-alt;
+    }
+  }
+
+  &.entity.name.type.instance { // new {ClassName}
+    // font-weight: normal;
   }
 }

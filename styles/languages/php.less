@@ -20,7 +20,8 @@
   }
 
   &.classobj,
-  &.storage.modifier, // public, private, global
+  // &.storage.modifier, // public, private, global
+  &.storage.modifier.reference, // &
   &.new, // new
   &.session, // session_start()
   &.import, // require(), include()
@@ -29,13 +30,13 @@
   &.control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   &.construct // echo
   {
-    color: @syntax-code-darker;
+    color: @syntax-code-alt;
   }
 
   &.inherited-class,
   &.class.name
   {
-    color: @syntax-code-dark;
+    color: @syntax-code-alt;
   }
 
   &.string,
@@ -69,16 +70,17 @@
     &.class,
     &.string,
     {
-      color:@syntax-code-darker;
+      color:@syntax-code-alt;
     }
 
     &.class { // ->, ::
       font-weight: normal;
     }
 
-    &.logical // ||, as
+    &.logical // ||, as, &&, !
     {
-      color: @syntax-code-darker;
+      color: @syntax-code-alt;
+      // color: @syntax-constant;
     }
   }
 

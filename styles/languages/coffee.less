@@ -11,7 +11,7 @@
   }
 
   // &.meta.brace {
-  //   color: @syntax-code-dark;
+  //   color: @syntax-code-alt;
   // }
 
   &.keyword.new {
@@ -21,5 +21,9 @@
   &.delimited,
   &.comma {
     opacity: 0.5
+  }
+
+  &.entity.name.type.instance {
+    color: @syntax-code-alt;
   }
 }

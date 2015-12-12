@@ -32,14 +32,15 @@
     font-weight: bold;
   }
 
-  &.pseudo-element,
-  &.pseudo-class
-  {
-    font-style: italic;
-  }
+  // &.pseudo-element,
+  // &.pseudo-class
+  // {
+  //   font-style: italic;
+  // }
 
   &.function,
   .mathematical-symbols,
+  &.punctuation.definition.entity, // &
   .property-value .property-value {
     color: @syntax-code;
   }
@@ -50,9 +51,8 @@
 
   // &.function,
   &.tag,
-  &.punctuation.definition.entity, // &
   &.reference {
-    color: @syntax-code-darker;
+    color: @syntax-code-alt;
   }
 
   &.important {
@@ -74,7 +74,7 @@
   // &.keyword,
   .html // atom-text-editor
   {
-    color: @syntax-code-darker;
+    color: @syntax-code-alt;
     font-weight: bold;
   }
 }
