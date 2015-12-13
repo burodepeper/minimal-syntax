@@ -23,7 +23,30 @@
     opacity: 0.5
   }
 
-  &.entity.name.type.instance {
+  &.entity.other.inherited-class {
     color: @syntax-code-alt;
+  }
+
+  &.entity.name {
+    &.type.class, // class {Class}
+    &.type.instance { // new {Instance}
+      color: @syntax-code-alt;
+    }
+
+    &.function {
+      font-weight: normal;
+
+      .meta.function.coffee & {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.string.script {
+    background: fade(@syntax-constant, 10%);
+
+    .punctuation {
+      color: @syntax-constant;
+    }
   }
 }
