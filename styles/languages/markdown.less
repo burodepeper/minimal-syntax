@@ -8,10 +8,16 @@
           opacity: 1;
         }
       }
+
+      .emphasis {
+        opacity: 1;
+        font-weight: normal;
+      }
     }
 
     &.hr {
-      color: fade(@syntax-code-alt, 50%);
+      // color: fade(@syntax-code-alt, 50%);
+      color: @syntax-constant;
     }
 
     &.quote {
@@ -44,6 +50,9 @@
         color: @syntax-code-alt;
         font-style: italic;
       }
+      &.label {
+        background: fade(@syntax-content, 5%);
+      }
     }
 
     &.gfm,
@@ -68,6 +77,7 @@
 
           .punctuation {
             opacity: 1;
+            color: @syntax-fg;
           }
 
           .todo,
@@ -88,7 +98,7 @@
         color: @syntax-fg;
 
         > .punctuation {
-          color: @syntax-code-alt;
+          color: @syntax-code;
         }
       }
       &.empty {
@@ -152,7 +162,7 @@
       color: @syntax-code-alt;
 
       > .punctuation {
-        color: @syntax-code-alt;
+        color: @syntax-code;
         opacity: 0.5;
 
         &.alignment {
