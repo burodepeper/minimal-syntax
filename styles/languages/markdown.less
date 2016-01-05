@@ -50,7 +50,7 @@
         color: @syntax-code-alt;
         font-style: italic;
       }
-      &.label {
+      &.string {
         background: fade(@syntax-content, 5%);
       }
     }
@@ -61,6 +61,9 @@
     }
 
     &.list {
+      > .punctuation {
+        opacity: 1;
+      }
       .heading {
         color: @syntax-code-alt;
         // font-weight: normal;
@@ -76,7 +79,6 @@
           }
 
           .punctuation {
-            opacity: 1;
             color: @syntax-fg;
           }
 
@@ -103,7 +105,8 @@
       }
       &.empty {
         .punctuation {
-          opacity: 1;
+          // opacity: 1;
+          color: @syntax-code-alt;
         }
       }
     }
