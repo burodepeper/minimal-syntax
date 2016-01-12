@@ -1,49 +1,49 @@
 .js {
   .variable {
     &.language {
-      color: @syntax-code; // this
+      color: @syntax; // this
     }
   }
 
   &.constant {
     &:not(.numeric) {
-      color: @syntax-code-alt;
+      color: @syntax-alt;
     }
 
     &.support, // x, y, prototype :(
     &.dom { // width, height
-      color: @syntax-fg;
+      color: @fg;
       font-weight: normal;
     }
   }
 
   &.instance {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   &.constant.boolean {
-    color: @syntax-constant;
+    color: @constant;
   }
 
   &.embedded {
     .html.tag {
-      color: @syntax-code-alt;
+      color: @syntax-alt;
     }
   }
 
   &.support.class, // event, window
   {
     font-weight: normal;
-    color: @syntax-code;
+    color: @syntax;
   }
 
   &.keyword {
     &.operator { // :, =, +, -
-      // color: @syntax-fg;
-      color: @syntax-code-alt;
+      // color: @fg;
+      color: @syntax-alt;
 
       &.new { // new
-        color: @syntax-code;
+        color: @syntax;
         font-weight: normal;
       }
 
@@ -51,7 +51,7 @@
       &.increment, // ++
       &.decrement, // --
       &.logical { // &&
-        color: @syntax-code;
+        color: @syntax;
       }
     }
 
@@ -62,10 +62,10 @@
 
   &.meta {
     &.comma {
-      color: @syntax-fg;
+      color: @fg;
     }
     &.prototype .support.constant { // prototype
-      color: @syntax-code-alt;
+      color: @syntax-alt;
     }
   }
 

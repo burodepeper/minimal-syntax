@@ -1,21 +1,21 @@
 .coffee {
   &.embedded.source {
-    color: @syntax-accent;
+    color: @accent;
   }
 
   .punctuation.separator,
   &.comma,
   // &.keyword.operator // '=', but also 'and', stupid parser
   {
-    color: @syntax-fg;
+    color: @fg;
   }
 
   // &.meta.brace {
-  //   color: @syntax-code-alt;
+  //   color: @syntax-alt;
   // }
 
   &.keyword.new {
-    color: @syntax-code;
+    color: @syntax;
   }
 
   &.delimited,
@@ -24,13 +24,13 @@
   }
 
   &.entity.other.inherited-class {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   &.entity.name {
     &.type.class, // class {Class}
     &.type.instance { // new {Instance}
-      color: @syntax-code-alt;
+      color: @syntax-alt;
     }
 
     &.function {
@@ -43,10 +43,10 @@
   }
 
   &.string.script {
-    background: fade(@syntax-constant, 10%);
+    background: fade(@constant, 10%);
 
     .punctuation {
-      color: @syntax-constant;
+      color: @constant;
     }
   }
 }

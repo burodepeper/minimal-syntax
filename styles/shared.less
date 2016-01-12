@@ -17,14 +17,14 @@
     &.todo,
     &.review,
     &.hack {
-      color: @syntax-comment;
+      color: @comment;
       font-weight: bold;
       text-decoration: underline;
     }
 
     &.todo,
     &.fixme {
-      color: @syntax-constant;
+      color: @constant;
     }
   }
 }
@@ -34,11 +34,11 @@
 .embedded {
   &.begin,
   &.end {
-    color: @syntax-fg;
+    color: @fg;
   }
 
   &.line {
-    background-color: fade(@syntax-fg, 5%);
+    background-color: fade(@fg, 5%);
 
     .begin,
     .end {

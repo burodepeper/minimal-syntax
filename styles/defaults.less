@@ -2,15 +2,15 @@
 .text.html,
 .source {
 
-  color: @syntax-fg;
+  color: @fg;
 
   .comment
   {
-    color: @syntax-comment;
+    color: @comment;
   }
 
   .operator {
-    color: @syntax-fg;
+    color: @fg;
 
     &.logical {
       font-weight: bold;
@@ -27,25 +27,25 @@
   .object,
   .control
   {
-    color: @syntax-code;
+    color: @syntax;
   }
 
   .constant,
   .unit,
   .numeric
   {
-    color: @syntax-constant;
+    color: @constant;
   }
 
   .variable
   {
-    color: @syntax-accent;
+    color: @accent;
   }
 
   .url,
   .string
   {
-    color: @syntax-content;
+    color: @content;
   }
 
   .attribute,
@@ -56,19 +56,19 @@
   .support.class, // coffee: Math
   .terminator
   {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   .sgml,
   .sgml .punctuation
   {
-    color: @syntax-constant;
+    color: @constant;
   }
 
   .invalid
   {
-    background: @syntax-constant;
-    color: @syntax-bg;
+    background: @constant;
+    color: @bg;
   }
 
   // .meta {} // ???
@@ -105,21 +105,21 @@
   .markup {
     &.heading {
       font-weight: bold;
-      color: @syntax-code;
+      color: @syntax;
     }
     &.inserted,
     &.addition,
     &.quote {
-      color: @syntax-content;
+      color: @content;
     }
     &.deletion {
-      color: @syntax-constant;
+      color: @constant;
     }
     &.changed {
-      color: @syntax-code;
+      color: @syntax;
     }
     &.list {
-      color: @syntax-code-alt;
+      color: @syntax-alt;
       &.completed {
         opacity: 0.333;
       }
@@ -128,13 +128,13 @@
       text-decoration: underline;
     }
     &.raw {
-      // background: fade(@syntax-fg, 10%);
-      color: @syntax-neutral;
+      // background: fade(@fg, 10%);
+      color: @neutral;
     }
   }
 
   .uri {
-    color: @syntax-code;
+    color: @syntax;
   }
 
 }

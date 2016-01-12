@@ -1,23 +1,17 @@
 // Basic colors (light)
-@syntax-bg:             #ffffff;
-@syntax-fg-pure:        #000000;
-@syntax-fg:             lighten(@syntax-fg-pure, 20%);
-@syntax-code:           #0000ff;
-@syntax-content:        #009900;
-@syntax-accent:         #0099cc;
-@syntax-constant:       #ee1100;
-@syntax-highlight:      #ffdd00;
-// @syntax-comment:        mix(@syntax-constant, @syntax-highlight);
-@syntax-comment:        #ff8000;
+@bg:             #ffffff;
+@fg:             #cccccc;
+@syntax:         #0000ff;
+@content:        #009900;
+@variable:       #0099cc;
+@constant:       #ee1100;
+@highlight:      #ffdd00;
+@comment:        #ff8000;
 
 // Derivatives (light)
-@syntax-neutral:        mix(@syntax-fg, @syntax-bg);
-@syntax-neutral-light:  mix(@syntax-neutral, @syntax-bg, 25%);
-@syntax-content-dark:   darken(@syntax-content, 10%);
-@syntax-comment-darker: darken(@syntax-comment, 10%);
+@neutral:        mix(@fg, @bg);
 
-@syntax-code-alt:       darken(@syntax-code, 15%);
-@syntax-comment-alt:    mix(@syntax-comment, @syntax-constant);
-
-@syntax-content-alt:    darken(@syntax-content, 10%);
-@syntax-constant-alt:   darken(@syntax-constant, 10%);
+@syntax-alt:     darken(@syntax, 15%);
+@comment-alt:    mix(@comment, @constant);
+@content-alt:    darken(@content, 10%);
+@constant-alt:   darken(@constant, 10%);

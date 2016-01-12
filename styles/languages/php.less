@@ -16,7 +16,7 @@
   // &.property.variable, // $var->property->function
   &.class.variable // Validate::$type ($type)
   {
-    color: @syntax-code;
+    color: @syntax;
   }
 
   &.classobj,
@@ -30,22 +30,22 @@
   &.control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   &.construct // echo
   {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   &.inherited-class,
   &.class.name
   {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   &.string,
   &.string-contents {
-    color: @syntax-content;
+    color: @content;
   }
 
   &.constant {
-    color: @syntax-constant;
+    color: @constant;
   }
 
   &.control,
@@ -70,7 +70,7 @@
     &.class,
     &.string,
     {
-      color:@syntax-code-alt;
+      color:@syntax-alt;
     }
 
     &.class { // ->, ::
@@ -79,14 +79,14 @@
 
     &.logical // ||, as, &&, !
     {
-      color: @syntax-code-alt;
-      // color: @syntax-constant;
+      color: @syntax-alt;
+      // color: @constant;
     }
   }
 
   &.arguments {
     &:not(.argument) {
-      color: fade(@syntax-fg, 66%);
+      color: fade(@fg, 66%);
     }
   }
 
@@ -94,7 +94,7 @@
     &.begin,
     &.end,
     &.line {
-      color: @syntax-neutral;
+      color: @neutral;
 
       .source.php {
         color: inherit;

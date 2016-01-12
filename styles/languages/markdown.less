@@ -1,7 +1,7 @@
 .text.md {
   .md {
     &.heading {
-      color: @syntax-code;
+      color: @syntax;
 
       &.empty {
         .punctuation {
@@ -16,48 +16,48 @@
     }
 
     &.hr {
-      // color: fade(@syntax-code-alt, 50%);
-      color: @syntax-constant;
+      // color: fade(@syntax-alt, 50%);
+      color: @constant;
     }
 
     &.quote {
-      color: @syntax-content;
+      color: @content;
 
       .link.markup,
       .link.text,
       .link.image,
       .string {
-        color: @syntax-content-dark;
+        color: @content-dark;
       }
 
       .uri {
-        color: @syntax-code-alt;
+        color: @syntax-alt;
       }
     }
 
     &.link {
       &.text {
-        color: @syntax-content;
+        color: @content;
       }
       &.destination {
-        color: @syntax-code;
+        color: @syntax;
 
         .uri {
           text-decoration: underline;
         }
       }
       &.title {
-        color: @syntax-code-alt;
+        color: @syntax-alt;
         font-style: italic;
       }
       &.string {
-        background: fade(@syntax-content, 5%);
+        background: fade(@content, 5%);
       }
     }
 
     &.gfm,
     &.reference {
-      color: @syntax-accent;
+      color: @accent;
       font-weight: normal;
     }
 
@@ -67,26 +67,26 @@
 
         .checkbox {
           // opacity: 1;
-          color: @syntax-code-alt;
-          background: fade(@syntax-code-alt, 10%);
+          color: @syntax-alt;
+          background: fade(@syntax-alt, 10%);
         }
       }
       .heading {
-        color: @syntax-code-alt;
+        color: @syntax-alt;
         // font-weight: normal;
       }
       &.task {
         &.completed {
-          color: @syntax-fg;
+          color: @fg;
           opacity: 0.333;
 
           .code {
             background: transparent;
-            color: @syntax-fg;
+            color: @fg;
           }
 
           .punctuation {
-            color: @syntax-fg;
+            color: @fg;
           }
 
           .todo,
@@ -104,43 +104,43 @@
       &.unordered,
       &.ordered
       {
-        color: @syntax-fg;
+        color: @fg;
 
         > .punctuation {
-          color: @syntax-code;
+          color: @syntax;
         }
       }
       &.empty {
         .punctuation {
           // opacity: 1;
-          color: @syntax-code-alt;
+          color: @syntax-alt;
         }
       }
     }
 
     &.code {
-      color: @syntax-neutral;
+      color: @neutral;
 
       &:not(.fenced) {
-        background: fade(@syntax-neutral, 10%);
+        background: fade(@neutral, 10%);
       }
 
       &.fenced {
         &.info {
-          color: @syntax-code-alt;
+          color: @syntax-alt;
         }
       }
     }
 
     // NOTE disabled
     // &.indented-code {
-    //   background: fade(@syntax-neutral, 10%);
+    //   background: fade(@neutral, 10%);
     // }
 
     &.constant {
-      color: @syntax-constant;
+      color: @constant;
       &.language {
-        color: @syntax-neutral;
+        color: @neutral;
         font-weight: normal;
       }
     }
@@ -165,18 +165,18 @@
     &.strong {
       font-weight: bold;
       font-style: normal;
-      // color: @syntax-fg-pure;
+      // color: @fg-pure;
     }
 
     &.table {
-      color: @syntax-code-alt;
+      color: @syntax-alt;
 
       > .punctuation {
-        color: @syntax-code;
+        color: @syntax;
         opacity: 0.5;
 
         &.alignment {
-          color: @syntax-code;
+          color: @syntax;
           opacity: 1;
         }
       }
@@ -189,25 +189,25 @@
 
     &.critic {
       &.addition {
-        color: @syntax-content;
+        color: @content;
       }
       &.deletion {
-        color: @syntax-constant;
+        color: @constant;
       }
       // &.highlight {
-      //   background: fade(@syntax-highlight, 25%);
+      //   background: fade(@highlight, 25%);
       // }
       &.comment {
-        color: @syntax-comment;
+        color: @comment;
         font-style: normal;
       }
       &.substitution {
-        color: @syntax-code;
+        color: @syntax;
       }
     }
 
     &.special-attributes {
-      color: @syntax-neutral;
+      color: @neutral;
     }
 
     &.special.attribute {
@@ -218,7 +218,7 @@
       &.id,
       &.class
       {
-        color: @syntax-constant;
+        color: @constant;
       }
 
       &.id {

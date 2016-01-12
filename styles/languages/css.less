@@ -3,7 +3,7 @@
 
   &.attribute
   {
-    color: @syntax-accent;
+    color: @accent;
   }
 
   &.keyword.unit.other,
@@ -13,7 +13,7 @@
 
   &.class,
   &.id {
-    color: @syntax-content;
+    color: @content;
 
     .punctuation.definition.entity { // # in #id
       color: inherit;
@@ -42,26 +42,26 @@
   .mathematical-symbols,
   &.punctuation.definition.entity, // &
   .property-value .property-value {
-    color: @syntax-code;
+    color: @syntax;
   }
 
   .property-value {
-    color: @syntax-fg;
+    color: @fg;
   }
 
   // &.function,
   &.tag,
   &.reference {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
   }
 
   &.important {
-    color: @syntax-constant;
+    color: @constant;
   }
   // Maybe in the future...
   // &.property-name {
   //   &.vendor-prefix {
-  //     color: fade(@syntax-code, 66%);
+  //     color: fade(@syntax, 66%);
   //     font-style: italic;
   //   }
   // }
@@ -74,7 +74,7 @@
   // &.keyword,
   .html // atom-text-editor
   {
-    color: @syntax-code-alt;
+    color: @syntax-alt;
     font-weight: bold;
   }
 }
