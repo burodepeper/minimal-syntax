@@ -1,12 +1,12 @@
 atom-text-editor,
 :host {
 
-  background: @bg;
-  color: @fg;
+  background: @background;
+  color: @text;
 
   &::shadow {
     .wrap-guide {
-      background-color: fade(@fg, 10%);
+      background-color: fade(@text, 10%);
     }
 
     atom-text-editor-minimap {
@@ -38,8 +38,8 @@ atom-text-editor,
   }
 
   &.is-focused {
-    background: @bg;
-    color: @fg;
+    background: @background;
+    color: @text;
 
     &::shadow {
       atom-text-editor-minimap {
@@ -58,16 +58,16 @@ atom-text-editor,
 
 
   .indent-guide {
-    color: fade(@fg, 10%);
+    color: fade(@text, 10%);
   }
 
   .invisible-character {
-    color: fade(@fg, 25%);
+    color: fade(@text, 25%);
   }
 
   .gutter {
     background: transparent;
-    color: fade(@fg, 50%);
+    color: fade(@text, 50%);
 
     // .line-numbers {
     //   .tile {}
@@ -79,11 +79,11 @@ atom-text-editor,
 
     .line-number {
       &.cursor-line {
-        color: fade(@fg, 50%);
+        color: fade(@text, 50%);
       }
 
       &.cursor-line-no-selection {
-        color: fade(@fg, 100%);
+        color: fade(@text, 100%);
       }
 
       &.git-line-added {
@@ -122,11 +122,11 @@ atom-text-editor,
   }
 
   .invisible {
-    color: fade(@fg, 25%);
+    color: fade(@text, 25%);
   }
 
   .cursor {
-    color: average(@fg, @accent);
+    color: average(@text, @accent);
     transition: opacity 0.333s;
     border-left-width: 2px;
   }
@@ -134,12 +134,12 @@ atom-text-editor,
   .highlights {
     .highlight {
       .region {
-        background: fade(@fg, 10%);
+        background: fade(@text, 10%);
       }
 
       &.selection {
         .region {
-          background: fade(average(@fg, @accent), 10%);
+          background: fade(average(@text, @accent), 10%);
         }
       }
 
@@ -158,7 +158,7 @@ atom-text-editor,
           border: none;
           border-radius: 0;
           // outline: 2px solid fade(@highlight, 50%);
-          box-shadow: 3px 3px 0 fade(@fg, 25%);
+          box-shadow: 3px 3px 0 fade(@text, 25%);
         }
       }
 
@@ -166,7 +166,7 @@ atom-text-editor,
         .region {
           background: fade(@highlight, 50%);
           // outline: 2px solid @highlight;
-          box-shadow: 3px 3px 0 fade(@fg, 50%);
+          box-shadow: 3px 3px 0 fade(@text, 50%);
           // background: transparent;
 
         }
@@ -175,7 +175,7 @@ atom-text-editor,
   }
 
   .cursor-line {
-    background-color: fade(average(@fg, @accent), 5%);
+    background-color: fade(average(@text, @accent), 5%);
   }
 
 }

@@ -2,7 +2,7 @@
 .text.html,
 .source {
 
-  color: @fg;
+  color: @text;
 
   .comment
   {
@@ -10,7 +10,7 @@
   }
 
   .operator {
-    color: @fg;
+    color: @text;
 
     &.logical {
       font-weight: bold;
@@ -68,7 +68,7 @@
   .invalid
   {
     background: @constant;
-    color: @bg;
+    color: @background;
   }
 
   // .meta {} // ???
@@ -128,7 +128,7 @@
       text-decoration: underline;
     }
     &.raw {
-      // background: fade(@fg, 10%);
+      // background: fade(@text, 10%);
       color: @neutral;
     }
   }
