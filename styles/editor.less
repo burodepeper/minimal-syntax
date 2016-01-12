@@ -22,19 +22,10 @@ atom-text-editor,
             position: absolute;
             top: 0; right: 0; bottom: 0;
             width: 4px;
-            // background: fade(@neutral, 50%);
           }
         }
       }
     }
-
-    // NOTE
-    // removes subpixel AA from tiles;
-    // results in richer colors, but is not meant to be as such
-    // .tile {
-    //   opacity: 0.999;
-    // }
-
   }
 
   &.is-focused {
@@ -45,10 +36,10 @@ atom-text-editor,
       atom-text-editor-minimap {
         &::shadow {
           .minimap-visible-area {
-            background-color: fade(@accent, 25%);
+            background-color: fade(@variable, 25%);
 
             &:after {
-              background: @accent;
+              background: @variable;
             }
           }
         }
@@ -68,10 +59,6 @@ atom-text-editor,
   .gutter {
     background: transparent;
     color: fade(@text, 50%);
-
-    // .line-numbers {
-    //   .tile {}
-    // }
 
     .custom-decorations {
       background: transparent !important;
@@ -126,7 +113,7 @@ atom-text-editor,
   }
 
   .cursor {
-    color: average(@text, @accent);
+    color: average(@text, @variable);
     transition: opacity 0.333s;
     border-left-width: 2px;
   }
@@ -139,7 +126,7 @@ atom-text-editor,
 
       &.selection {
         .region {
-          background: fade(average(@text, @accent), 10%);
+          background: fade(average(@text, @variable), 10%);
         }
       }
 
@@ -157,7 +144,6 @@ atom-text-editor,
           background: fade(@highlight, 50%);
           border: none;
           border-radius: 0;
-          // outline: 2px solid fade(@highlight, 50%);
           box-shadow: 3px 3px 0 fade(@text, 25%);
         }
       }
@@ -165,17 +151,38 @@ atom-text-editor,
       &.current-result {
         .region {
           background: fade(@highlight, 50%);
-          // outline: 2px solid @highlight;
           box-shadow: 3px 3px 0 fade(@text, 50%);
-          // background: transparent;
-
         }
       }
     }
   }
 
   .cursor-line {
-    background-color: fade(average(@text, @accent), 5%);
+    background-color: fade(average(@text, @variable), 5%);
+  }
+}
+
+// ---------- embedded styles ----------
+
+.embedded {
+  &.begin,
+  &.end {
+    color: @text;
   }
 
+  &.line {
+    background-color: fade(@text, 5%);
+
+    .begin,
+    .end {
+      opacity: 0.667;
+    }
+  }
+
+  &.block {
+    .php.meta.begin,
+    .php.meta.end {
+      opacity: 1;
+    }
+  }
 }

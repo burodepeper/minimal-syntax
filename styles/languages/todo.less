@@ -1,5 +1,3 @@
-// ---------- language-todo ----------
-
 .text.plain,
 .text.md,
 .source.gfm,
@@ -25,31 +23,6 @@
     &.todo,
     &.fixme {
       color: @constant;
-    }
-  }
-}
-
-// ---------- embedded styles ----------
-
-.embedded {
-  &.begin,
-  &.end {
-    color: @text;
-  }
-
-  &.line {
-    background-color: fade(@text, 5%);
-
-    .begin,
-    .end {
-      opacity: 0.667;
-    }
-  }
-
-  &.block {
-    .php.meta.begin,
-    .php.meta.end {
-      opacity: 1;
     }
   }
 }
