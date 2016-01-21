@@ -1,5 +1,3 @@
-.text.md,
-.text.html,
 .source {
 
   color: @text;
@@ -76,7 +74,7 @@
   .at-rule .keyword, // less/scss
   .doctype,
   .constant,
-  .heading,
+  // .heading,
   .bold,
   .name,
   .magic,
@@ -100,37 +98,6 @@
   .punctuation {
     color: inherit;
     font-weight: normal;
-  }
-
-  .markup {
-    &.heading {
-      font-weight: bold;
-      color: @syntax;
-    }
-    &.inserted,
-    &.addition,
-    &.quote {
-      color: @content;
-    }
-    &.deletion {
-      color: @constant;
-    }
-    &.changed {
-      color: @syntax;
-    }
-    &.list {
-      color: @syntax-alt;
-      &.completed {
-        opacity: 0.333;
-      }
-    }
-    &.underline {
-      text-decoration: underline;
-    }
-    &.raw {
-      // background: fade(@text, 10%);
-      color: @neutral;
-    }
   }
 
   .uri {
