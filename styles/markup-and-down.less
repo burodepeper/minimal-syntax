@@ -2,16 +2,16 @@
 // Define colors
 // ----------------------------------------
 
-@_background:     #ffffff;
-@_text:           #333333;
-@_syntax:         #0000ff;
-@_syntax_alt:     darken(@_syntax, 15%);
-@_content:        #009900;
-@_variable:       #0099cc;
-@_constant:       #ee1100;
-@_highlight:      #ffdd00;
-@_comment:        #ff8000;
-@_neutral:        mix(@_text, @_background);
+@_background:     @background;
+@_text:           @text;
+@_syntax:         @syntax;
+@_syntax_alt:     @syntax-alt;
+@_content:        @content;
+@_variable:       @variable;
+@_constant:       @constant;
+@_highlight:      @highlight;
+@_comment:        @neutral;
+@_neutral:        @neutral;
 
 
 
@@ -34,6 +34,10 @@
 
   &.underline {
     text-decoration: underline;
+  }
+
+  &.strike {
+    text-decoration: line-through;
   }
 
   &.heading,
@@ -215,7 +219,6 @@
     }
 
     &.strike {
-      text-decoration: line-through;
       opacity: 0.5;
     }
 
