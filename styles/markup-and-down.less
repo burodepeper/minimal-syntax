@@ -233,17 +233,24 @@
 
     &.special-attributes {}
 
-    &.special.attribute {
-      &.other {
-        color: inherit;
-      }
+    &.attribute {
+      &.special {
+        &.other {
+          color: inherit;
+        }
 
-      &.id {
-        font-weight: bold;
-      }
+        &.id {
+          font-weight: bold;
+        }
 
-      &.class {
-        font-weight: normal;
+        &.class {
+          font-weight: normal;
+        }
+      }
+      .value {
+        &.storage {
+          color: @_syntax_alt;
+        }
       }
     }
   }
