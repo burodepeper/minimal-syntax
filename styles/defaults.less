@@ -8,6 +8,23 @@ atom-text-editor, :host {
     .markup.link {
       color: inherit;
     }
+
+    .doc {
+      &.tag {
+        font-weight: bold;
+        color: @constant;
+
+        .punctuation {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .jsdoc,
+    .phpdoc {
+      color: @constant;
+      font-weight: bold;
+    }
   }
 
   .operator {
