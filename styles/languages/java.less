@@ -1,22 +1,46 @@
-.java {
+.java,
+.processing {
   .meta {
     .keyword {
       // color: @syntax-alt;
       font-weight: bold;
+      &.operator {
+        font-weight: normal;
+      }
     }
     .method {
       color: @syntax;
     }
+    .body {
+      color: @text;
+      font-weight: normal;
+    }
   }
 
-  .storage {
-    &.type {
+  .entity {
+    &.name {
+      // color: @text;
       font-weight: bold;
-
-      &.primitive {
-        // color: @syntax-alt;
-        font-weight: bold;
+      &.class {
+        color: @syntax-alt;
       }
+    }
+  }
+
+  .type {
+    &.storage {
+      // font-weight: bold;
+
+      &.generic {
+        .storage.type {
+          color: @syntax;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &.support {
+      // font-weight: bold;
     }
   }
 }
