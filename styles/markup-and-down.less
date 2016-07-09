@@ -186,7 +186,12 @@
 
       &.fenced {
         color: @_neutral;
+        background: fade(@_neutral, 10%);
         &.info {}
+
+        .embedded.source {
+          color: @_text;
+        }
       }
     }
 
