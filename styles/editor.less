@@ -67,18 +67,34 @@ atom-text-editor,
     .line-number {
       &.cursor-line {
         color: fade(@text, 50%);
+        // background: transparent;
+        // box-shadow: none;
+        // background-color: fade(@variable, 10%);
+
+        &.git-line-added {
+          background: fade(average(@content, @variable), 15%);
+        }
+
+        &.git-line-modified {
+          background: fade(average(@comment, @variable), 15%);
+        }
       }
 
       &.cursor-line-no-selection {
         color: fade(@text, 100%);
+        // background: transparent;
+        // background: fade(@variable, 5%);
+        // box-shadow: none;
       }
 
       &.git-line-added {
         color: @content;
+        background: fade(@content, 10%);
       }
 
       &.git-line-modified {
         color: @comment;
+        background: fade(@comment, 10%);
       }
     }
 
@@ -115,7 +131,7 @@ atom-text-editor,
   .cursor {
     color: average(@text, @variable);
     transition: opacity 0.333s;
-    border-left-width: 2px;
+    border-left-width: 3px;
   }
 
   .highlights {
@@ -161,6 +177,8 @@ atom-text-editor,
   .cursor-line {
     // background-color: fade(average(@text, @variable), 5%);
     background-color: fade(@variable, 10%);
+    // box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    // box-shadow: inset 0 0 6px fade(@variable, 25%);
   }
 
   .highlight-column {
