@@ -4,6 +4,16 @@ atom-text-editor,
   background: @background;
   color: @text;
 
+  .indent-guide-improved {
+    background-color: fade(@text, 10%);
+    &.indent-guide-stack {
+      background-color: fade(average(@variable, @text), 25%);
+      &.indent-guide-active {
+        background-color: fade(@text, 40%);
+      }
+    }
+  }
+
   &::shadow {
     .wrap-guide {
       background-color: fade(@text, 10%);
@@ -47,6 +57,11 @@ atom-text-editor,
     }
   }
 
+  .line {
+    &.embedded-code {
+      background: fade(@text, 5%);
+    }
+  }
 
   .indent-guide {
     color: fade(@text, 10%);
