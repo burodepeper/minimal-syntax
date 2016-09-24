@@ -6,7 +6,7 @@
   },
   "theme": "syntax",
   "main": "./lib/main.coffee",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Light syntax theme, high contrast/low brightness, three primary colors, easy on the eyes",
   "keywords": [
     "syntax",
