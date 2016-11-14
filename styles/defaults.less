@@ -1,126 +1,123 @@
-atom-text-editor, :host {
+atom-text-editor {
 
   color: @text;
 
-  .comment {
+  .syntax--comment {
     color: @comment;
 
-    .markup.link {
+    .syntax--markup.syntax--link {
       color: inherit;
     }
 
-    .doc {
-      &.tag {
+    .syntax--doc {
+      &.syntax--tag {
         font-weight: bold;
         color: @constant;
 
-        .punctuation {
+        .syntax--punctuation {
           font-weight: normal;
         }
       }
     }
 
-    .jsdoc,
-    .phpdoc {
+    .syntax--jsdoc,
+    .syntax--phpdoc {
       color: @constant;
       font-weight: bold;
     }
   }
 
-  .operator {
+  .syntax--operator {
     color: @text;
 
-    &.logical {
+    &.syntax--logical {
       font-weight: bold;
     }
   }
 
-  .support,
-  .storage,
-  .modifier,
-  .tag,
-  .keyword,
-  .function-call,
-  .function,
-  .object,
-  .control
+  .syntax--support,
+  .syntax--storage,
+  .syntax--modifier,
+  .syntax--tag,
+  .syntax--keyword,
+  .syntax--function-call,
+  .syntax--function,
+  .syntax--object,
+  .syntax--control
   {
     color: @syntax;
   }
 
-  .constant,
-  .unit,
-  .numeric
+  .syntax--constant,
+  .syntax--unit,
+  .syntax--numeric
   {
     color: @constant;
   }
 
-  .variable
+  .syntax--variable
   {
     color: @variable;
   }
 
-  .url,
-  .string
+  .syntax--url,
+  .syntax--string
   {
     color: @content;
   }
 
-  .attribute,
-  .at-rule, // less/scss
-  .pseudo-class,
-  .pseudo-element,
-  .sgml,
-  .support.class, // coffee: Math
-  .terminator
+  .syntax--attribute,
+  .syntax--at-rule, // less/scss
+  .syntax--pseudo-class,
+  .syntax--pseudo-element,
+  .syntax--sgml,
+  .syntax--support.syntax--class, // coffee: Math
+  .syntax--terminator
   {
     color: @syntax-alt;
   }
 
-  .sgml,
-  .sgml .punctuation
+  .syntax--sgml,
+  .syntax--sgml .syntax--punctuation
   {
     color: @constant;
   }
 
-  .invalid
+  .syntax--invalid
   {
     background: @constant;
     color: @background;
   }
 
-  // .meta {} // ???
-
-  .at-rule .keyword, // less/scss
-  .doctype,
-  .constant,
-  // .heading,
-  .bold,
-  .name,
-  .magic,
-  .class
+  .syntax--at-rule .syntax--keyword, // less/scss
+  .syntax--doctype,
+  .syntax--constant,
+  .syntax--bold,
+  .syntax--name,
+  .syntax--magic,
+  .syntax--class
   {
     font-weight: bold;
   }
 
-  .comment,
-  .italic
+  .syntax--comment,
+  .syntax--italic
   {
     font-style: italic;
   }
 
-  .terminator,
-  .punctuation
+  .syntax--terminator,
+  .syntax--punctuation
   {
     opacity: 0.667;
   }
 
-  .punctuation {
+  .syntax--punctuation {
     color: inherit;
     font-weight: normal;
   }
 
-  .uri {
+  .syntax--uri {
     color: @syntax;
   }
 

@@ -1,20 +1,20 @@
-.json {
+.syntax--json {
 
-  &.string {
-    > .punctuation {
+  &.syntax--string {
+    > .syntax--punctuation {
       opacity: 0.5;
     }
   }
 
-  &.dictionary {
-    &:not(.value) {
-      > .string {
+  &.syntax--dictionary {
+    &:not(.syntax--value) {
+      > .syntax--string {
         color: @syntax;
       }
     }
 
-    &.value {
-      > .string {
+    &.syntax--value {
+      > .syntax--string {
         color: @content;
       }
     }

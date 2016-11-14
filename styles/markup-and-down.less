@@ -19,60 +19,60 @@
 // Generic markup styles
 // ----------------------------------------
 
-.markup {
+.syntax--markup {
 
-  &.bold,
-  &.heading,
-  &.strong.emphasis {
+  &.syntax--bold,
+  &.syntax--heading,
+  &.syntax--strong.syntax--emphasis {
     font-weight: bold;
   }
 
-  &.italic,
-  &.emphasis:not(.strong) {
+  &.syntax--italic,
+  &.syntax--emphasis:not(.syntax--strong) {
     font-style: italic;
   }
 
-  &.underline {
+  &.syntax--underline {
     text-decoration: underline;
   }
 
-  &.strike {
+  &.syntax--strike {
     text-decoration: line-through;
   }
 
-  &.heading,
-  &.substitution,
-  &.changed {
+  &.syntax--heading,
+  &.syntax--substitution,
+  &.syntax--changed {
     color: @_syntax;
   }
 
-  &.inserted,
-  &.addition,
-  &.quote {
+  &.syntax--inserted,
+  &.syntax--addition,
+  &.syntax--quote {
     color: @_content;
   }
 
-  &.deletion,
-  &.hr {
+  &.syntax--deletion,
+  &.syntax--hr {
     color: @_constant;
   }
 
-  &.link {
+  &.syntax--link {
     color: @_variable;
   }
 
-  &.list {
-    & > .punctuation {
+  &.syntax--list {
+    & > .syntax--punctuation {
       color: @_syntax_alt;
     }
   }
 
-  &.raw,
-  &.code {
+  &.syntax--raw,
+  &.syntax--code {
     color: @_neutral;
   }
 
- .punctuation {
+ .syntax--punctuation {
    opacity: 0.5;
  }
 }
@@ -83,88 +83,88 @@
 // Define custom markdown styles
 // ----------------------------------------
 
-.text.md {
-  .md {
-    &.heading {
-      &.empty {
-        .punctuation {
+.syntax--text.syntax--md {
+  .syntax--md {
+    &.syntax--heading {
+      &.syntax--empty {
+        .syntax--punctuation {
           opacity: 1;
         }
       }
 
-      .emphasis {
+      .syntax--emphasis {
         opacity: 1;
         font-weight: normal;
       }
     }
 
-    &.hr {}
-    &.quote {}
+    &.syntax--hr {}
+    &.syntax--quote {}
 
-    &.link {
-      &.text {}
-      &.destination {
-        .uri {
+    &.syntax--link {
+      &.syntax--text {}
+      &.syntax--destination {
+        .syntax--uri {
           text-decoration: underline;
         }
       }
-      &.title {
+      &.syntax--title {
         color: @_syntax_alt;
         font-style: italic;
       }
-      &.string {
+      &.syntax--string {
         background: fade(@_content, 5%);
       }
     }
 
-    &.gfm {}
+    &.syntax--gfm {}
 
-    &.reference {
-      &.class {
+    &.syntax--reference {
+      &.syntax--class {
         font-weight: normal;
       }
-      &.link {
+      &.syntax--link {
         color: @_syntax;
       }
     }
 
-    &.link {
-      &.auto,
-      &.destination {
+    &.syntax--link {
+      &.syntax--auto,
+      &.syntax--destination {
         color: @_syntax;
       }
     }
 
-    &.list {
-      > .punctuation {
+    &.syntax--list {
+      > .syntax--punctuation {
         opacity: 1;
         color: @_syntax_alt;
 
-        .checkbox {
+        .syntax--checkbox {
           color: @_syntax_alt;
           background: fade(@_syntax_alt, 5%);
         }
       }
 
-      &.unordered,
-      &.ordered {}
+      &.syntax--unordered,
+      &.syntax--ordered {}
 
-      &.task {
-        &.completed {
+      &.syntax--task {
+        &.syntax--completed {
           color: @_text;
           opacity: 0.333;
 
-          .code {
+          .syntax--code {
             background: transparent;
             color: @_text;
           }
 
-          .todo,
-          .review {
+          .syntax--todo,
+          .syntax--review {
             color: inherit;
           }
 
-          .fixme {
+          .syntax--fixme {
             background: transparent;
             outline: none;
             color: inherit;
@@ -172,92 +172,92 @@
         }
       }
 
-      &.empty {
-        .punctuation {
+      &.syntax--empty {
+        .syntax--punctuation {
           color: @_syntax;
         }
       }
     }
 
-    &.code {
-      &:not(.fenced) {
+    &.syntax--code {
+      &:not(.syntax--fenced) {
         background: fade(@_neutral, 10%);
       }
 
-      &.fenced {
+      &.syntax--fenced {
         color: @_neutral;
         background: fade(@_neutral, 10%);
-        &.info {}
+        &.syntax--info {}
 
-        .embedded.source {
+        .syntax--embedded.syntax--source {
           color: @_text;
         }
       }
     }
 
-    &.math {
+    &.syntax--math {
       background: fade(@_neutral, 10%);
     }
 
-    &.constant {
-      &.language {}
+    &.syntax--constant {
+      &.syntax--language {}
     }
 
-    &.emphasis {
-      &:not(.strong) {
+    &.syntax--emphasis {
+      &:not(.syntax--strong) {
         opacity: 0.75;
       }
 
-      &:not(.strong) .strong {
+      &:not(.syntax--strong) .syntax--strong {
         font-style: italic;
       }
     }
 
-    &.strong {}
+    &.syntax--strong {}
 
-    &.table {
+    &.syntax--table {
       color: @_syntax_alt;
 
-      > .punctuation {
+      > .syntax--punctuation {
         opacity: 0.5;
 
-        &.alignment {
+        &.syntax--alignment {
           opacity: 1;
         }
       }
     }
 
-    &.strike {
+    &.syntax--strike {
       opacity: 0.5;
     }
 
-    &.critic {
-      &.addition {}
-      &.deletion {}
-      &.comment {
+    &.syntax--critic {
+      &.syntax--addition {}
+      &.syntax--deletion {}
+      &.syntax--comment {
         font-style: normal;
       }
-      &.substitution {}
+      &.syntax--substitution {}
     }
 
-    &.special-attributes {}
+    &.syntax--special-attributes {}
 
-    &.attribute {
-      &.special {
-        &.other {
+    &.syntax--attribute {
+      &.syntax--special {
+        &.syntax--other {
           color: inherit;
         }
 
-        &.id {
+        &.syntax--id {
           font-weight: bold;
         }
 
-        &.class {
+        &.syntax--class {
           font-weight: normal;
         }
       }
-      .value {
-        &.storage {
+      .syntax--value {
+        &.syntax--storage {
           color: @_syntax_alt;
         }
       }

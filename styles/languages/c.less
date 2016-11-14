@@ -1,55 +1,55 @@
-.c {
-  &.meta {
+.syntax--c {
+  &.syntax--meta {
     color: @text;
 
-    &.parens {
+    &.syntax--parens {
       color: @variable;
     }
   }
 
-  &.preprocessor,
-  &.include,
-  &.function,
-  &.initialization .variable,
+  &.syntax--preprocessor,
+  &.syntax--include,
+  &.syntax--function,
+  &.syntax--initialization .syntax--variable,
   {
     color: @syntax;
   }
 
-  &.string {
+  &.syntax--string {
     color: @content;
   }
 
-  &.storage {
-    &.modifier { // static, const
+  &.syntax--storage {
+    &.syntax--modifier { // static, const
       color: @syntax-alt;
     }
 
-    &.type { // char, int, struct
+    &.syntax--type { // char, int, struct
       color: @syntax-alt;
     }
   }
 
-  &.entity {
-    &.name { // function-name
+  &.syntax--entity {
+    &.syntax--name { // function-name
 
     }
   }
 
-  &.keyword {
+  &.syntax--keyword {
     // font-weight: bold;
   }
 
-  &.control {
+  &.syntax--control {
     font-weight: bold;
   }
 
-  &.import {
+  &.syntax--import {
     font-weight: normal;
   }
 
 
 
-  &.punctuation {
+  &.syntax--punctuation {
     color: inherit;
     opacity: 0.5;
     font-weight: normal;

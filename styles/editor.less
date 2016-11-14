@@ -1,14 +1,14 @@
-atom-text-editor,
-:host {
+atom-text-editor {
 
   background: @background;
   color: @text;
 
   .indent-guide-improved {
     background-color: fade(@text, 10%);
+
     &.indent-guide-stack {
-      // background-color: fade(average(@variable, @text), 25%);
       background-color: fade(@text, 10%);
+
       &.indent-guide-active {
         background-color: fade(@variable, 33%);
         width: 2px;
@@ -16,7 +16,7 @@ atom-text-editor,
     }
   }
 
-  &::shadow {
+  // &::shadow {
     .wrap-guide {
       background-color: fade(@text, 10%);
     }
@@ -24,7 +24,7 @@ atom-text-editor,
     atom-text-editor-minimap {
       overflow: visible; // hope this doesn't break anything; was originally hidden
 
-      &::shadow {
+      // &::shadow {
         .minimap-visible-area {
           background-color: fade(@neutral, 25%);
           opacity: 1;
@@ -36,17 +36,17 @@ atom-text-editor,
             width: 4px;
           }
         }
-      }
+      // }
     }
-  }
+  // }
 
   &.is-focused {
     background: @background;
     color: @text;
 
-    &::shadow {
+    // &::shadow {
       atom-text-editor-minimap {
-        &::shadow {
+        // &::shadow {
           .minimap-visible-area {
             background-color: fade(@variable, 25%);
 
@@ -54,9 +54,9 @@ atom-text-editor,
               background: @variable;
             }
           }
-        }
+        // }
       }
-    }
+    // }
   }
 
   .line {
@@ -205,24 +205,24 @@ atom-text-editor,
 
 // ---------- embedded styles ----------
 
-.embedded {
-  &.begin,
-  &.end {
+.syntax--embedded {
+  &.syntax--begin,
+  &.syntax--end {
     color: @text;
   }
 
-  &.line {
+  &.syntax--line {
     background-color: fade(@text, 5%);
 
-    .begin,
-    .end {
+    .syntax--begin,
+    .syntax--end {
       opacity: 0.667;
     }
   }
 
-  &.block {
-    .php.meta.begin,
-    .php.meta.end {
+  &.syntax--block {
+    .syntax--php.syntax--meta.syntax--begin,
+    .syntax--php.syntax--meta.syntax--end {
       opacity: 1;
     }
   }

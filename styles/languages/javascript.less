@@ -1,97 +1,97 @@
-.js {
-  .variable {
-    &.language {
+.syntax--js {
+  .syntax--variable {
+    &.syntax--language {
       color: @syntax; // this
     }
   }
 
-  &.constant {
+  &.syntax--constant {
     // &:not(.numeric) {
     //   color: @syntax-alt;
     // }
 
-    &.support, // x, y, prototype :(
-    &.dom { // width, height
+    &.syntax--support, // x, y, prototype :(
+    &.syntax--dom { // width, height
       color: @text;
       font-weight: normal;
     }
   }
 
-  &.support {
-    &.function {
-      &.event-handler {
+  &.syntax--support {
+    &.syntax--function {
+      &.syntax--event-handler {
         font-weight: bold;
       }
     }
 
-    &.constant {
+    &.syntax--constant {
       color: @variable;
     }
   }
 
-  &.instance {
+  &.syntax--instance {
     color: @syntax-alt;
   }
 
-  &.constant.boolean {
+  &.syntax--constant.syntax--boolean {
     color: @constant;
   }
 
-  &.embedded {
-    .html.tag {
+  &.syntax--embedded {
+    .syntax--html.syntax--tag {
       color: @syntax-alt;
     }
   }
 
-  &.support.class, // event, window
+  &.syntax--support.syntax--class, // event, window
   {
     font-weight: normal;
     color: @syntax;
   }
 
-  &.keyword {
-    &.operator { // :, =, +, -
+  &.syntax--keyword {
+    &.syntax--operator { // :, =, +, -
       // color: @text;
       color: @syntax-alt;
 
-      &.new { // new
+      &.syntax--new { // new
         color: @syntax;
         font-weight: normal;
       }
 
-      &.comparison, // ==
-      &.increment, // ++
-      &.decrement, // --
-      &.logical { // &&
+      &.syntax--comparison, // ==
+      &.syntax--increment, // ++
+      &.syntax--decrement, // --
+      &.syntax--logical { // &&
         color: @syntax;
       }
     }
 
-    &.control { // from, if, return
+    &.syntax--control { // from, if, return
 
     }
   }
 
-  &.meta {
-    &.comma {
+  &.syntax--meta {
+    &.syntax--comma {
       color: @text;
     }
-    &.prototype .support.constant { // prototype
+    &.syntax--prototype .syntax--support.syntax--constant { // prototype
       color: @syntax-alt;
     }
-    &.arguments {
-      > .punctuation {
+    &.syntax--arguments {
+      > .syntax--punctuation {
         color: @syntax;
       }
     }
-    &.function-call {
-      & > .name {
+    &.syntax--function-call {
+      & > .syntax--name {
         font-weight: normal;
       }
     }
   }
 
-  &.entity.name.type.instance { // new {ClassName}
+  &.syntax--entity.syntax--name.syntax--type.syntax--instance { // new {ClassName}
     // font-weight: normal;
   }
 }

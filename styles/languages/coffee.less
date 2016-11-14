@@ -1,10 +1,10 @@
-.coffee {
-  &.embedded.source {
+.syntax--coffee {
+  &.syntax--embedded.syntax--source {
     color: @variable;
   }
 
-  .punctuation.separator,
-  &.comma,
+  .syntax--punctuation.syntax--separator,
+  &.syntax--comma,
   // &.keyword.operator // '=', but also 'and', stupid parser
   {
     color: @text;
@@ -14,38 +14,38 @@
   //   color: @syntax-alt;
   // }
 
-  &.keyword.new {
+  &.syntax--keyword.syntax--new {
     color: @syntax;
   }
 
-  &.delimited,
-  &.comma {
+  &.syntax--delimited,
+  &.syntax--comma {
     opacity: 0.5
   }
 
-  &.entity.other.inherited-class {
+  &.syntax--entity.syntax--other.syntax--inherited-class {
     color: @syntax-alt;
   }
 
-  &.entity.name {
-    &.type.class, // class {Class}
-    &.type.instance { // new {Instance}
+  &.syntax--entity.syntax--name {
+    &.syntax--type.syntax--class, // class {Class}
+    &.syntax--type.syntax--instance { // new {Instance}
       color: @syntax-alt;
     }
 
-    &.function {
+    &.syntax--function {
       font-weight: normal;
 
-      .meta.function.coffee & {
+      .syntax--meta.syntax--function.syntax--coffee & {
         font-weight: bold;
       }
     }
   }
 
-  &.string.script {
+  &.syntax--string.syntax--script {
     background: fade(@constant, 10%);
 
-    .punctuation {
+    .syntax--punctuation {
       color: @constant;
     }
   }

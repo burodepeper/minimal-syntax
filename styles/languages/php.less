@@ -1,102 +1,102 @@
-.php {
+.syntax--php {
 
-  &.storage.modifier.extends, // extends
-  &.storage.modifier.abstract, // abstract
-  &.basic-functions, // define()
-  &.function.support,
-  &.function.math, // floor()
-  &.function.file, // realpath(), file_exists(), is_writable()
-  &.function.dir, // opendir(), readdir()
-  &.function.info, // ini_get()
-  &.function.array, // array_merge()
-  &.storage.type, // parent, (int)
-  &.storage.type.class, // class
-  &.storage.type.function, // function
-  &.support.construct, // array(), isset(), empty()
+  &.syntax--storage.syntax--modifier.syntax--extends, // extends
+  &.syntax--storage.syntax--modifier.syntax--abstract, // abstract
+  &.syntax--basic-functions, // define()
+  &.syntax--function.syntax--support,
+  &.syntax--function.syntax--math, // floor()
+  &.syntax--function.syntax--file, // realpath(), file_exists(), is_writable()
+  &.syntax--function.syntax--dir, // opendir(), readdir()
+  &.syntax--function.syntax--info, // ini_get()
+  &.syntax--function.syntax--array, // array_merge()
+  &.syntax--storage.syntax--type, // parent, (int)
+  &.syntax--storage.syntax--type.syntax--class, // class
+  &.syntax--storage.syntax--type.syntax--function, // function
+  &.syntax--support.syntax--construct, // array(), isset(), empty()
   // &.property.variable, // $var->property->function
-  &.class.variable // Validate::$type ($type)
+  &.syntax--class.syntax--variable // Validate::$type ($type)
   {
     color: @syntax;
   }
 
-  &.classobj,
+  &.syntax--classobj,
   // &.storage.modifier, // public, private, global
-  &.storage.modifier.reference, // &
-  &.new, // new
-  &.session, // session_start()
-  &.import, // require(), include()
-  &.network, // header()
-  &.support.network, // header()
-  &.control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
-  &.construct // echo
+  &.syntax--storage.syntax--modifier.syntax--reference, // &
+  &.syntax--new, // new
+  &.syntax--session, // session_start()
+  &.syntax--import, // require(), include()
+  &.syntax--network, // header()
+  &.syntax--support.syntax--network, // header()
+  &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
+  &.syntax--construct // echo
   {
     color: @syntax-alt;
   }
 
-  &.inherited-class,
-  &.class.name
+  &.syntax--inherited-class,
+  &.syntax--class.syntax--name
   {
     color: @syntax-alt;
   }
 
-  &.string,
-  &.string-contents {
+  &.syntax--string,
+  &.syntax--string-contents {
     color: @content;
   }
 
-  &.constant {
+  &.syntax--constant {
     color: @constant;
   }
 
-  &.control,
-  &.classobj,
-  &.network,
-  &.import
+  &.syntax--control,
+  &.syntax--classobj,
+  &.syntax--network,
+  &.syntax--import
   {
     font-weight: bold;
   }
 
-  &.keyword.operator.string
+  &.syntax--keyword.syntax--operator.syntax--string
   {
     opacity: 0.667;
   }
 
-  .operator {
-    &.arithmetic, // +, *
-    &.assignment, // =
-    &.comparison, // >
-    &.increment-decrement, // ++, --
-    &.key, // =>
-    &.class,
-    &.string,
+  .syntax--operator {
+    &.syntax--arithmetic, // +, *
+    &.syntax--assignment, // =
+    &.syntax--comparison, // >
+    &.syntax--increment-decrement, // ++, --
+    &.syntax--key, // =>
+    &.syntax--class,
+    &.syntax--string,
     {
       color:@syntax-alt;
     }
 
-    &.class { // ->, ::
+    &.syntax--class { // ->, ::
       font-weight: normal;
     }
 
-    &.logical // ||, as, &&, !
+    &.syntax--logical // ||, as, &&, !
     {
       color: @syntax-alt;
       // color: @constant;
     }
   }
 
-  &.arguments {
-    &:not(.argument) {
+  &.syntax--arguments {
+    &:not(.syntax--argument) {
       color: fade(@text, 66%);
     }
   }
 
-  &.embedded {
-    &.begin,
-    &.end,
-    &.line {
+  &.syntax--embedded {
+    &.syntax--begin,
+    &.syntax--end,
+    &.syntax--line {
       color: @neutral;
 
-      .source.php {
+      .syntax--source.syntax--php {
         color: inherit;
       }
     }
