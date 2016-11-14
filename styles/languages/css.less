@@ -1,34 +1,34 @@
-.css,
-.scss {
+.syntax--css,
+.syntax--scss {
 
-  &.attribute
+  &.syntax--attribute
   {
     color: @variable;
   }
 
-  &.keyword.unit.other,
-  .attribute-name {
+  &.syntax--keyword.syntax--unit.syntax--other,
+  .syntax--attribute-name {
     font-weight: normal;
   }
 
-  &.class,
-  &.id {
+  &.syntax--class,
+  &.syntax--id {
     color: @content;
 
-    .punctuation.definition.entity { // # in #id
+    .syntax--punctuation.syntax--definition.syntax--entity { // # in #id
       color: inherit;
     }
   }
 
-  &.parent-selector {
-    .punctuation {
+  &.syntax--parent-selector {
+    .syntax--punctuation {
       opacity: 1;
     }
   }
 
-  .function,
-  &.punctuation.definition.entity, // &
-  &.id {
+  .syntax--function,
+  &.syntax--punctuation.syntax--definition.syntax--entity, // &
+  &.syntax--id {
     font-weight: bold;
   }
 
@@ -38,24 +38,24 @@
   //   font-style: italic;
   // }
 
-  &.function,
-  .mathematical-symbols,
-  &.punctuation.definition.entity, // &
-  .property-value .property-value {
+  &.syntax--function,
+  .syntax--mathematical-symbols,
+  &.syntax--punctuation.syntax--definition.syntax--entity, // &
+  .syntax--property-value .syntax--property-value {
     color: @syntax;
   }
 
-  .property-value {
+  .syntax--property-value {
     color: @text;
   }
 
   // &.function,
-  &.tag,
-  &.reference {
+  &.syntax--tag,
+  &.syntax--reference {
     color: @syntax-alt;
   }
 
-  &.important {
+  &.syntax--important {
     color: @constant;
   }
   // Maybe in the future...
@@ -69,10 +69,10 @@
 
 
 
-.less {
+.syntax--less {
   // &.control,
   // &.keyword,
-  .html // atom-text-editor
+  .syntax--html // atom-text-editor
   {
     color: @syntax-alt;
     font-weight: bold;

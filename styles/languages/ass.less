@@ -1,27 +1,27 @@
-.ass {
-  &.punctuation {
+.syntax--ass {
+  &.syntax--punctuation {
     opacity: 0.5;
   }
 
-  &.scope {
+  &.syntax--scope {
     font-weight: bold;
   }
 
-  &.token {
+  &.syntax--token {
     background: fade(@content, 10%);
 
-    &.punctuation {
+    &.syntax--punctuation {
       opacity: 0.333;
     }
   }
 
-  &.output {
-    .token {
+  &.syntax--output {
+    .syntax--token {
       background: fade(@syntax-alt, 5%);
       color: fade(@syntax-alt, 67%);
     }
 
-    .scope {
+    .syntax--scope {
       font-weight: normal;
       color: @syntax-alt;
     }

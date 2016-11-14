@@ -1,27 +1,27 @@
-.text.plain,
-.text.md,
-.source.gfm,
-.comment {
-  .type {
+.syntax--text.syntax--plain,
+.syntax--text.syntax--md,
+.syntax--source.syntax--gfm,
+.syntax--comment {
+  .syntax--type {
     // font-style: normal;
 
-    &.changed,
-    &.idea,
-    &.nb,
-    &.note,
-    &.xxx,
-    &.hack,
-    &.review,
-    &.todo,
-    &.review,
-    &.hack {
+    &.syntax--changed,
+    &.syntax--idea,
+    &.syntax--nb,
+    &.syntax--note,
+    &.syntax--xxx,
+    &.syntax--hack,
+    &.syntax--review,
+    &.syntax--todo,
+    &.syntax--review,
+    &.syntax--hack {
       color: @comment;
       font-weight: bold;
       text-decoration: underline;
     }
 
-    &.todo,
-    &.fixme {
+    &.syntax--todo,
+    &.syntax--fixme {
       color: @constant;
     }
   }

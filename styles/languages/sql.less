@@ -1,33 +1,33 @@
-.sql {
-  &.keyword {
+.syntax--sql {
+  &.syntax--keyword {
     font-weight: bold;
   }
 
-  &.keyword.operator {
+  &.syntax--keyword.syntax--operator {
     font-weight: normal;
     // color: @content;
     color: @syntax;
   }
 
-  &.storage.type {
+  &.syntax--storage.syntax--type {
     color: @syntax-alt;
   }
 
-  &.meta.alter,
-  &.meta.create {
+  &.syntax--meta.syntax--alter,
+  &.syntax--meta.syntax--create {
     color: @content;
 
-    .entity.name {
+    .syntax--entity.syntax--name {
       color: inherit;
     }
   }
 
-  &.constant {
-    &.other {
+  &.syntax--constant {
+    &.syntax--other {
       font-weight: normal;
     }
-    &.database-name,
-    &.table-name {
+    &.syntax--database-name,
+    &.syntax--table-name {
       color: @content;
     }
   }
