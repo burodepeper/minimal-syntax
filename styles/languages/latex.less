@@ -1,0 +1,14 @@
+.latex {
+  .meta {
+    &.group,
+    &.footnote {
+      color: @variable;
+    }
+  }
+
+  .string {
+    &.other:not(.block) {
+      background: fade(@text, 10%);
+    }
+  }
+}
