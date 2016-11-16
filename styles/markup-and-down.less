@@ -201,6 +201,10 @@
 
     &.syntax--math {
       background: fade(@_neutral, 10%);
+
+      .line.code-block & {
+        background: transparent;
+      }
     }
 
     &.syntax--constant {

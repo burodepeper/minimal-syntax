@@ -59,9 +59,14 @@ atom-text-editor {
     // }
   }
 
-  .line {
+  .line,
+  .line-number {
     &.code-block {
       background: fade(@text, 5%);
+    }
+
+    &.table-block {
+      background: fade(@syntax, 5%);
     }
   }
 
