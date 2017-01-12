@@ -9,12 +9,14 @@
   .syntax--at-rule
   {
     color: @syntax-alt;
+    // background: fade(@syntax-alt, 10%);
   }
 
   .syntax--at-rule .syntax--function
   {
-    color: inherit;
-    font-weight: normal;
+    // color: inherit;
+    // font-weight: normal;
+    color: @constant;
   }
 
   &.syntax--keyword.syntax--unit.syntax--other,
