@@ -6,6 +6,17 @@
     color: @variable;
   }
 
+  .syntax--at-rule
+  {
+    color: @syntax-alt;
+  }
+
+  .syntax--at-rule .syntax--function
+  {
+    color: inherit;
+    font-weight: normal;
+  }
+
   &.syntax--keyword.syntax--unit.syntax--other,
   .syntax--attribute-name {
     font-weight: normal;
