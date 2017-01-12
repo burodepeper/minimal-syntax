@@ -6,6 +6,7 @@
     // font-style: normal;
 
     &.syntax--changed,
+    &.syntax--fixme,
     &.syntax--idea,
     &.syntax--nb,
     &.syntax--note,
@@ -15,14 +16,8 @@
     &.syntax--todo,
     &.syntax--review,
     &.syntax--hack {
-      color: @comment;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    &.syntax--todo,
-    &.syntax--fixme {
       color: @constant;
+      font-weight: bold;
     }
   }
 }

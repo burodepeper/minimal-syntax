@@ -113,14 +113,11 @@ atom-text-editor {
 
       &.cursor-line-no-selection {
         color: fade(@text, 100%);
-        // background: transparent;
-        // background: fade(@variable, 5%);
-        // box-shadow: none;
       }
 
       &.git-line-added {
         color: @content;
-        background: fade(@content, 10%);
+        background: fade(@content, 15%);
         border-left: 0;
         padding-left: 0.5em;
         &.cursor-line {
@@ -131,12 +128,21 @@ atom-text-editor {
 
       &.git-line-modified {
         color: @comment;
-        background: fade(@comment, 15%);
+        background: fade(@comment, 20%);
         border-left: 0;
         padding-left: 0.5em;
         &.cursor-line {
           background: @comment;
           color: @background;
+        }
+      }
+
+      &.git-line-removed {
+        &:before {
+          color: @constant;
+          bottom: -6px;
+          border-width: 6px;
+          margin-top: -6px;
         }
       }
 
