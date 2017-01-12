@@ -213,11 +213,16 @@
 
     &.syntax--emphasis {
       &:not(.syntax--strong) {
-        opacity: 0.75;
+        // opacity: 0.75;
+        color: @_syntax;
       }
 
       &:not(.syntax--strong) .syntax--strong {
         font-style: italic;
+      }
+
+      .syntax--punctuation {
+        opacity: 1;
       }
     }
 

@@ -70,6 +70,15 @@ atom-text-editor {
     }
   }
 
+  .fold-marker {
+    background: @highlight;
+    &:after {
+      color: @text !important;
+      padding: 0 0.5em;
+      // line-height: inherit;
+    }
+  }
+
   .indent-guide {
     color: fade(@text, 10%);
   }
@@ -112,11 +121,28 @@ atom-text-editor {
       &.git-line-added {
         color: @content;
         background: fade(@content, 10%);
+        border-left: 0;
+        padding-left: 0.5em;
+        &.cursor-line {
+          background: @content;
+          color: @background;
+        }
       }
 
       &.git-line-modified {
         color: @comment;
-        background: fade(@comment, 10%);
+        background: fade(@comment, 15%);
+        border-left: 0;
+        padding-left: 0.5em;
+        &.cursor-line {
+          background: @comment;
+          color: @background;
+        }
+      }
+
+      .icon-right {
+        opacity: 1;
+        color: inherit;
       }
     }
 
@@ -143,7 +169,10 @@ atom-text-editor {
   .gutter .line-number:after,
   .fold-marker:after
   {
-    color: @constant;
+    // color: @constant;
+    background: @highlight;
+    color: @text;
+    opacity: 1;
   }
 
   .invisible {
