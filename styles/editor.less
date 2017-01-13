@@ -171,14 +171,11 @@ atom-text-editor {
 
   }
 
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after
-  {
-    // color: @constant;
-    background: @highlight;
-    color: @text;
-    opacity: 1;
+  .gutter .line-number.folded {
+    background: fade(@highlight, 50%);
+    &.cursor-line {
+      background: @highlight;
+    }
   }
 
   .invisible {
