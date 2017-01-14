@@ -60,6 +60,10 @@ atom-text-editor {
     &.table-block {
       background: fade(@syntax, 5%);
     }
+
+    &.cursor-line {
+      background: fade(@variable, 10%);
+    }
   }
 
   .fold-marker {
@@ -205,10 +209,6 @@ atom-text-editor {
         }
       }
     }
-  }
-
-  .cursor-line {
-    background: fade(@variable, 10%);
   }
 
   .highlight-column {
