@@ -94,4 +94,14 @@
   &.syntax--entity.syntax--name.syntax--type.syntax--instance { // new {ClassName}
     // font-weight: normal;
   }
+
+  &.syntax--string {
+    & > .syntax--embedded.syntax--js {
+      // background: fade(@variable, 10%);
+
+      & > .syntax--punctuation {
+        color: @variable;
+      }
+    }
+  }
 }
