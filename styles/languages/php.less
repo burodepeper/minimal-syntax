@@ -14,6 +14,8 @@
   &.syntax--storage.syntax--type.syntax--function, // function
   &.syntax--support.syntax--construct, // array(), isset(), empty()
   // &.property.variable, // $var->property->function
+  &.syntax--new, // new
+  &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   &.syntax--class.syntax--variable // Validate::$type ($type)
   {
     color: @syntax;
@@ -22,13 +24,12 @@
   &.syntax--classobj,
   // &.storage.modifier, // public, private, global
   &.syntax--storage.syntax--modifier.syntax--reference, // &
-  &.syntax--new, // new
   &.syntax--session, // session_start()
   &.syntax--import, // require(), include()
   &.syntax--network, // header()
   &.syntax--support.syntax--network, // header()
-  &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
-  &.syntax--construct // echo
+  &.syntax--construct, // echo
+  &.syntax--keyword.syntax--exception, // try, catch, finally
   {
     color: @syntax-alt;
   }
@@ -36,7 +37,8 @@
   &.syntax--inherited-class,
   &.syntax--class.syntax--name
   {
-    color: @syntax-alt;
+    // color: @syntax-alt;
+    color: @text;
   }
 
   &.syntax--string,
@@ -44,14 +46,26 @@
     color: @content;
   }
 
+  &.syntax--storage.syntax--type, // typecast (string) or (int)
   &.syntax--constant {
     color: @constant;
   }
 
-  &.syntax--control,
+  // &.syntax--sql {
+  //   background: fade(@content, 10%);
+  // }
+
+  // &.syntax--control,
+  // &.syntax--storage.syntax--modifier,
   &.syntax--classobj,
   &.syntax--network,
-  &.syntax--import
+  &.syntax--import,
+  &.syntax--function.syntax--var,
+  &.syntax--function.syntax--construct,
+  &.syntax--function.syntax--funchand,
+  &.syntax--meta.syntax--function-call,
+  &.syntax--support.syntax--function,
+  &.syntax--keyword.syntax--exception, // try, catch, finally
   {
     font-weight: bold;
   }
@@ -70,7 +84,9 @@
     &.syntax--class,
     &.syntax--string,
     {
-      color:@syntax-alt;
+      // color:@syntax-alt;
+      color: @syntax;
+      // color: @text;
     }
 
     &.syntax--class { // ->, ::
@@ -79,8 +95,10 @@
 
     &.syntax--logical // ||, as, &&, !
     {
-      color: @syntax-alt;
+      // color: @syntax-alt;
       // color: @constant;
+      color: @syntax;
+      font-weight: normal;
     }
   }
 
@@ -99,6 +117,19 @@
       .syntax--source.syntax--php {
         color: inherit;
       }
+    }
+  }
+
+  &.syntax--regexp {
+    .syntax--punctuation {
+      opacity: 0.5;
+    }
+    &.syntax--character-class {
+      background: fade(@content, 10%);
+    }
+    &.syntax--arbitrary-repetition {
+      // background: fade(@syntax, 10%);
+      color: @syntax;
     }
   }
 }
