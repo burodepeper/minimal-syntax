@@ -158,14 +158,38 @@
           color: @_text;
           opacity: 0.333;
 
+          & > .punctuation {
+            color: @text;
+            opacity: 0.667;
+          }
+
           .syntax--code {
             background: transparent;
             color: @_text;
           }
 
+          .syntax--comment,
+          .syntax--strike,
+          .syntax--reference,
+          .syntax--link,
+          .syntax--constant,
+          .syntax--emphasis,
+          .syntax--heading,
+          .syntax--quote,
           .syntax--todo,
           .syntax--review {
+            opacity: 1;
             color: inherit;
+            font-weight: normal;
+
+            .syntax--punctuation {
+              opacity: 1;
+            }
+          }
+
+          .syntax--strike,
+          .syntax--underline {
+            text-decoration: none;
           }
 
           .syntax--fixme {
