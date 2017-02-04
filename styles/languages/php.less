@@ -61,10 +61,10 @@
   &.syntax--network,
   &.syntax--import,
   &.syntax--function.syntax--var,
-  &.syntax--function.syntax--construct,
+  // &.syntax--function.syntax--construct,
   &.syntax--function.syntax--funchand,
   &.syntax--meta.syntax--function-call,
-  &.syntax--support.syntax--function,
+  &.syntax--support.syntax--function:not(.syntax--output),
   &.syntax--keyword.syntax--exception, // try, catch, finally
   {
     font-weight: bold;
@@ -89,6 +89,7 @@
       // color: @text;
     }
 
+    &.syntax--support.syntax--function.syntax--construct.syntax--output,
     &.syntax--class { // ->, ::
       font-weight: normal;
     }

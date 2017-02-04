@@ -29,6 +29,18 @@
     }
   }
 
+  &.syntax--function:not(.syntax--parameter) {
+    font-weight: bold;
+  }
+
+  &.syntax--dom {
+    color: @syntax;
+  }
+
+  &.syntax--meta.syntax--parameters {
+    font-weight: normal;
+  }
+
   &.syntax--instance {
     color: @syntax-alt;
   }
