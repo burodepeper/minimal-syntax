@@ -78,7 +78,8 @@
       &.syntax--increment, // ++
       &.syntax--decrement, // --
       &.syntax--logical { // &&
-        color: @syntax;
+        // color: @syntax-alt;
+        // color: @text;
       }
     }
 
@@ -113,10 +114,28 @@
   &.syntax--string {
     & > .syntax--embedded.syntax--js {
       // background: fade(@variable, 10%);
+      color: @syntax;
 
       & > .syntax--punctuation {
         color: @variable;
       }
+    }
+  }
+
+  &.syntax--arguments {
+    color: @text;
+  }
+
+  &.syntax--meta {
+    &.syntax--brace {
+      color: @syntax;
+    }
+  }
+
+  &.syntax--function {
+    &.syntax--bracket {
+      color: @syntax;
+      font-weight: normal;
     }
   }
 }
