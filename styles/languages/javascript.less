@@ -29,20 +29,28 @@
     }
   }
 
+  &.syntax--keyword.syntax--operator.syntax--typeof,
+  &.syntax--keyword.syntax--operator.syntax--instanceof,
   &.syntax--function:not(.syntax--parameter) {
     font-weight: bold;
   }
 
+  // &.syntax--keyword.syntax--operator.syntax--new,
+  &.syntax--keyword.syntax--operator.syntax--typeof,
+  &.syntax--keyword.syntax--operator.syntax--instanceof,
   &.syntax--dom {
     color: @syntax;
   }
 
+  &.syntax--keyword.syntax--operator.syntax--new,
   &.syntax--meta.syntax--parameters {
     font-weight: normal;
   }
 
+  &.syntax--keyword.syntax--operator.syntax--new,
   &.syntax--instance {
     color: @syntax-alt;
+    // color: @text;
   }
 
   &.syntax--constant.syntax--boolean {
@@ -65,11 +73,6 @@
     &.syntax--operator { // :, =, +, -
       // color: @text;
       color: @syntax-alt;
-
-      &.syntax--new { // new
-        color: @syntax;
-        font-weight: normal;
-      }
 
       &.syntax--comparison, // ==
       &.syntax--increment, // ++
