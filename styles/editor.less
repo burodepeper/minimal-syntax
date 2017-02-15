@@ -176,6 +176,11 @@ atom-text-editor {
     .highlight {
       .region {
         background: fade(@text, 10%);
+
+        &.misspelling {
+          background: fade(@variable, 10%);
+          border-bottom-color: @constant;
+        }
       }
 
       &.selection {

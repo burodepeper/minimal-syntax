@@ -1,0 +1,29 @@
+.syntax--git-commit {
+  &.syntax--deprecated {
+    background: transparent;
+    color: @constant;
+  }
+  &.syntax--illegal {
+    background: @constant;
+    color: @background;
+  }
+
+  &.syntax--comment {
+    color: fade(@neutral, 67%);
+    &.syntax--punctuation {
+      opacity: 0.5;
+    }
+  }
+
+  &.syntax--markup {
+    &.syntax--changed {
+      color: @syntax;
+    }
+    &.syntax-inserted {
+      color: @content;
+    }
+    &.syntax--deleted {
+      color: @constant;
+    }
+  }
+}
