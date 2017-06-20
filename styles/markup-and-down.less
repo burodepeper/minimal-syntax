@@ -4,6 +4,7 @@
 
 @_background:     @background;
 @_text:           @text;
+@_text-alt:       @text-alt;
 @_syntax:         @syntax;
 @_syntax_alt:     @syntax-alt;
 @_content:        @content;
@@ -38,6 +39,12 @@
 
   &.syntax--strike {
     text-decoration: line-through;
+  }
+
+  &.symtax--bold {
+    .syntax--text.syntax--md > & {
+      color: @_text-alt;
+    }
   }
 
   &.syntax--heading,

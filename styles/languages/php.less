@@ -15,7 +15,7 @@
   &.syntax--support.syntax--construct, // array(), isset(), empty()
   // &.property.variable, // $var->property->function
   &.syntax--new, // new
-  &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
+  // &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   &.syntax--class.syntax--variable // Validate::$type ($type)
   {
     color: @syntax;
@@ -30,12 +30,15 @@
   &.syntax--support.syntax--network, // header()
   &.syntax--construct, // echo
   &.syntax--keyword.syntax--exception, // try, catch, finally
+  &.syntax--storage.syntax--modifier, // public, private, global
   {
     color: @syntax-alt;
   }
 
   &.syntax--inherited-class,
-  &.syntax--class.syntax--name
+  &.syntax--support.syntax--class,
+  &.syntax--class.syntax--name,
+  &.syntax--control, // if, then, else, return, exit(), foreach, switch, case, default, break, die, while
   {
     // color: @syntax-alt;
     color: @text;
@@ -65,7 +68,7 @@
   &.syntax--function.syntax--funchand,
   &.syntax--meta.syntax--function-call,
   &.syntax--support.syntax--function:not(.syntax--output),
-  &.syntax--keyword.syntax--exception, // try, catch, finally
+  // &.syntax--keyword.syntax--exception, // try, catch, finally
   {
     font-weight: bold;
   }

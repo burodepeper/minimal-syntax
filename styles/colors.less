@@ -1,12 +1,14 @@
 // Basic colors (light)
 @background:     #ffffff;
 @text:           #333333;
+@text-alt:       #000;
 @syntax:         #0000ff;
+@highlight:      #ffdd00;
 @content:        #009900;
 @variable:       #0099cc;
+@variable-alt:   mix(@variable, @syntax);
 @constant:       #ee1100;
-@highlight:      #ffdd00;
-@comment:       mix(@constant, @highlight);
+@comment:        mix(@constant, @highlight);
 
 // Derivatives (light)
 @neutral:        mix(@text, @background);

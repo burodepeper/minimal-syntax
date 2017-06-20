@@ -9,16 +9,18 @@
   .syntax--at-rule
   {
     color: @syntax-alt;
-    // background: fade(@syntax-alt, 10%);
-    // text-decoration: underline;
+    .syntax--name {
+      color: @constant;
+      font-weight: normal;
+    }
   }
 
-  .syntax--at-rule .syntax--function
-  {
-    // color: inherit;
-    font-weight: normal;
-    color: @syntax-alt;
-  }
+  // .syntax--at-rule .syntax--function
+  // {
+  //   // color: inherit;
+  //   font-weight: normal;
+  //   color: @syntax-alt;
+  // }
 
   &.syntax--keyword.syntax--unit.syntax--other,
   .syntax--attribute-name {
@@ -46,8 +48,8 @@
     font-weight: bold;
   }
 
-  .syntax--function,
-  &.syntax--punctuation.syntax--definition.syntax--entity, // &
+  // .syntax--function,
+  // &.syntax--punctuation.syntax--definition.syntax--entity, // &
   &.syntax--id {
     font-weight: bold;
   }
@@ -60,11 +62,23 @@
 
   &.syntax--tag,
   &.syntax--reference,
-  &.syntax--function,
+  // &.syntax--function,
   .syntax--mathematical-symbols,
-  &.syntax--punctuation.syntax--definition.syntax--entity, // &
+  // &.syntax--punctuation.syntax--definition.syntax--entity, // &
   .syntax--property-value .syntax--property-value {
     color: @syntax;
+  }
+
+  .syntax--property-name {
+    color: @syntax;
+  }
+
+  &.syntax--parent-selector,
+  &.syntax--pseudo-class,
+  &.syntax--function,
+  &.syntax--tag.syntax--reference {
+    color: @variable;
+    font-weight: normal;
   }
 
   .syntax--property-value {
